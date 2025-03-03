@@ -4,7 +4,7 @@ import {
   RiNextjsLine,
   RiReactjsLine,
   RiTailwindCssLine,
-  RiHtml5Line
+  RiHtml5Line,
 } from "react-icons/ri";
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { motion, Variants } from "framer-motion";

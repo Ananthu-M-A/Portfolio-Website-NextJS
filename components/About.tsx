@@ -46,7 +46,9 @@ const About = () => {
         >
           <Card className="bg-white/10 backdrop-blur-lg shadow-md p-6">
             <CardContent>
-              <p className="text-lg font-light leading-relaxed text-white">{ABOUT_TEXT}</p>
+              <p className="text-lg font-light leading-relaxed text-neutral-400">
+                {ABOUT_TEXT}
+              </p>
             </CardContent>
           </Card>
         </motion.div>
