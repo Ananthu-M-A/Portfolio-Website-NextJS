@@ -21,14 +21,14 @@ const fadeIn = (delay: number) => ({
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full backdrop-blur-lg bg-white/70 dark:bg-black/40 shadow-md px-6 lg:px-16 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 z-50 w-full backdrop-blur-lg bg-black dark:bg-black/40 shadow-md px-6 lg:px-16 py-4 flex items-center justify-between border-b border-gray-700 dark:border-gray-300">
       <motion.div variants={fadeIn(0.2)} initial="hidden" animate="visible">
         <Image
           src={logo}
           alt="Logo"
           width={48}
           height={48}
-          className="rounded-lg"
+          className="rounded-lg border-2 border-gray-700 dark:border-gray-300"
         />
       </motion.div>
       <div className="flex items-center gap-4">
