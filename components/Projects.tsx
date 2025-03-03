@@ -1,5 +1,5 @@
 import React from "react"
-import { PROJECTS } from "../../config/constants"
+import { PROJECTS } from "../config/constants"
 import { motion } from "framer-motion"
 import { StaticImageData } from "next/legacy/image"
 

@@ -1,12 +1,12 @@
 'use client';
 
-import About from "@/components/ui/About";
-import Contacts from "@/components/ui/Contacts";
-import Experiences from "@/components/ui/Experiences";
-import Hero from "@/components/ui/Hero";
-import Navbar from "@/components/ui/Navbar";
-import Projects from "@/components/ui/Projects";
-import Technologies from "@/components/ui/Technologies";
+import About from "@/components/About";
+import Contacts from "@/components/Contacts";
+import Experiences from "@/components/Experiences";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import Projects from "@/components/Projects";
+import Technologies from "@/components/Technologies";
 
 export default function Home() {
   return (

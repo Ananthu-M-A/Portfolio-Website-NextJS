@@ -1,6 +1,6 @@
 import React from 'react'
-import profile from '../../public/profile.jpg'
-import { HERO_CONTENT } from '../../config/constants'
+import profile from '../public/profile.jpg'
+import { HERO_CONTENT } from '../config/constants'
 import { motion } from "framer-motion"
 import { StaticImageData } from "next/legacy/image";
 

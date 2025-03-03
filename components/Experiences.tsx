@@ -1,5 +1,5 @@
 import React from "react"
-import { EXPERIENCES } from "../../config/constants"
+import { EXPERIENCES } from "../config/constants"
 import { motion } from "framer-motion"
 
 const Experiences = () => {

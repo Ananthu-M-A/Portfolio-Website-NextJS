@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../public/logo.png'
+import logo from '../public/logo.png'
 import { FaGithub, FaInbox, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import { motion } from "framer-motion"
 import { StaticImageData } from "next/legacy/image"

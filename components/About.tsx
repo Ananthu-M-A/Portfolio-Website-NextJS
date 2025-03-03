@@ -1,6 +1,6 @@
 import React from 'react'
-import aboutImg from '../../public/about.png';
-import { ABOUT_TEXT } from '../../config/constants'
+import aboutImg from '../public/about.png';
+import { ABOUT_TEXT } from '../config/constants'
 import { motion } from "framer-motion"
 import Image, { StaticImageData } from "next/legacy/image";
 
