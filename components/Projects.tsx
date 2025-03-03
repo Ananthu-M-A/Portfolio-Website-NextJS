@@ -13,6 +13,7 @@ const Projects = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="my-12 text-center text-4xl font-bold"
       >
         Projects
@@ -38,6 +39,7 @@ const Projects = () => {
                     width={500}
                     height={300}
                     className="rounded-lg"
+                    loading="lazy"
                   />
                 </motion.div>
                 <h6 className="mb-2 text-xl font-semibold text-white">

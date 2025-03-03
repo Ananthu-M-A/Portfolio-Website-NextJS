@@ -13,13 +13,13 @@ const container = (delay: number) => ({
 
 const Hero = () => {
   return (
-    <section className="relative flex flex-col lg:flex-row items-center justify-between gap-8 border-b border-neutral-800 pb-12 lg:mb-24 px-6 lg:px-16 lg:py-20 bg-neutral-900">
+    <section className="relative flex flex-col lg:flex-row items-center justify-between gap-8 border-b border-neutral-800 pb-12 lg:mb-24 px-6 lg:px-16 lg:py-24 bg-neutral-900">
       <div className="w-full lg:w-1/2 text-center lg:text-left text-white">
         <motion.h1
           variants={container(0)}
           initial="hidden"
           animate="visible"
-          className="text-5xl font-bold tracking-tight lg:text-6xl"
+          className="text-3xl font-bold tracking-tight lg:text-5xl"
         >
           Ananthu M A
         </motion.h1>
