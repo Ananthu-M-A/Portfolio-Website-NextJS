@@ -1,6 +1,6 @@
 import React from "react";
 import profile from "../public/profile.jpg";
-import { HERO_CONTENT } from "@/config/constants";
+import { CONTACT, HERO_CONTENT, RESUME_URL } from "@/config/constants";
 import { motion } from "framer-motion";
 import { StaticImageData } from "next/legacy/image";
 import { Button } from "@/components/ui/button";
@@ -49,10 +49,17 @@ const Hero = () => {
           <Button
             size="lg"
             className="bg-blue-600 text-white hover:bg-blue-700"
+            onClick={() =>
+              window.open(RESUME_URL, "_blank", "noopener,noreferrer")
+            }
           >
             Download Resume
           </Button>
-          <Button size="lg" variant="secondary">
+          <Button
+            size="lg"
+            variant="secondary"
+            onClick={() => window.open(`mailto:${CONTACT.email}`, "_self")}
+          >
             Contact Me
           </Button>
         </motion.div>
