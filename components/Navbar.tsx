@@ -30,7 +30,7 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full backdrop-blur-lg bg-white/70 dark:bg-black/40 shadow-md px-6 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 z-50 w-full backdrop-blur-lg bg-white/70 dark:bg-black/40 shadow-md  px-6 lg:px-20 py-4 flex items-center justify-between backdrop-filter backdrop-blur-lg">
       <div className="flex items-center">
         <motion.img
           variants={container(0.3)}
