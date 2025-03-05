@@ -13,7 +13,7 @@ const container = (delay: number) => ({
 
 const Hero = () => {
   return (
-    <section className="relative flex flex-col lg:flex-row items-center justify-between gap-8 border-b border-neutral-800 pb-12 lg:mb-24 px-6 lg:px-16 lg:py-24 bg-neutral-900">
+    <section className="relative flex flex-col lg:flex-row items-center justify-between gap-8 border-b border-neutral-800 pb-12 lg:mb-24 px-6 lg:px-16 lg:py-24 py-24 bg-neutral-900">
       <div className="w-full lg:w-1/2 text-center lg:text-left text-white">
         <motion.h1
           variants={container(0)}
@@ -48,7 +48,7 @@ const Hero = () => {
         >
           <Button
             size="lg"
-            className="bg-blue-600 text-white hover:bg-blue-700"
+            className="bg-blue-600 text-white hover:bg-blue-700 w-1/2"
             onClick={() =>
               window.open(RESUME_URL, "_blank", "noopener,noreferrer")
             }
