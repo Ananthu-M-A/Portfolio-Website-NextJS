@@ -37,20 +37,21 @@ const technologies = [
 
 const Technologies = () => {
   return (
-    <section className="border-b border-neutral-800 pb-24 px-6 lg:px-16">
+    <section className="border-b border-neutral-800 pb-24 px-4 sm:px-6 lg:px-16">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.5 }}
-        className="my-12 text-center text-4xl font-bold"
+        className="my-12 text-center text-4xl sm:text-5xl font-bold"
       >
         Technologies
       </motion.h2>
+
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 1.5 }}
-        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 justify-center"
+        className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
       >
         {technologies.map((tech, index) => (
           <motion.div
@@ -60,7 +61,7 @@ const Technologies = () => {
             animate="animate"
           >
             <Card className="flex items-center justify-center rounded-xl bg-white/10 backdrop-blur-lg shadow-lg p-6 transition-transform duration-300 hover:scale-110 hover:shadow-cyan-500/50">
-              <CardContent className="flex items-center justify-center text-6xl">
+              <CardContent className="flex items-center justify-center text-5xl sm:text-6xl">
                 {tech.icon}
               </CardContent>
             </Card>
