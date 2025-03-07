@@ -8,17 +8,18 @@ import Image, { StaticImageData } from "next/image";
 
 const Projects = () => {
   return (
-    <section className="border-b border-neutral-800 pb-16 px-6 lg:px-16">
+    <section className="border-b border-neutral-800 pb-16 px-4 sm:px-6 lg:px-16">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="my-12 text-center text-4xl font-bold"
+        className="my-12 text-center text-4xl sm:text-5xl font-bold"
       >
         Projects
       </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
@@ -38,25 +39,29 @@ const Projects = () => {
                     alt={project.title}
                     width={500}
                     height={300}
-                    className="rounded-lg"
+                    className="rounded-lg hover:scale-105 transition-transform"
                     loading="lazy"
                   />
                 </motion.div>
+
                 <h6 className="mb-2 text-xl font-semibold text-white">
                   {project.title}
                 </h6>
+
                 <p className="mb-4 text-neutral-400">{project.description}</p>
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, index) => (
                     <Badge
                       key={index}
                       variant="default"
-                      className="text-cyan-400 border border-cyan-500"
+                      className="text-cyan-400 border border-cyan-500 hover:bg-cyan-500 hover:text-white transition-colors"
                     >
                       {tech}
                     </Badge>
                   ))}
                 </div>
+
                 <Button asChild variant="secondary" className="w-full">
                   <a
                     href={project.website}
