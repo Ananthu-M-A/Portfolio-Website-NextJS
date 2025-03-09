@@ -1,6 +1,6 @@
 import React from "react";
 import profile from "../public/profile.jpg";
-import { CONTACT, HERO_CONTENT, RESUME_URL } from "@/config/constants";
+import { CONTACT, HERO_CONTENT } from "@/config/constants";
 import { motion } from "framer-motion";
 import { StaticImageData } from "next/legacy/image";
 import { Button } from "@/components/ui/button";
@@ -50,7 +50,7 @@ const Hero = () => {
             size="lg"
             className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto"
             onClick={() =>
-              window.open(RESUME_URL, "_blank", "noopener,noreferrer")
+              window.open("/resume.pdf", "_blank", "noopener,noreferrer")
             }
           >
             Download Resume
