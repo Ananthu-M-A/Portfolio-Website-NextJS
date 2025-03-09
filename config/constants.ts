@@ -6,7 +6,7 @@ import project5 from "../public/projects/project-5.png";
 
 export const HERO_CONTENT = `Welcome to my portfolio! I'm Ananthu M A, a skilled MERN stack developer with a comprehensive understanding of front-end and back-end technologies. My journey in tech began with a Diploma in Electronics Engineering, and I further honed my skills in computer science and software development through intensive training. With a knack for problem-solving and a keen eye for detail, I specialize in building scalable and efficient web applications. My portfolio showcases a range of projects, from complex e-commerce platforms to innovative hotel booking systems, demonstrating my versatility and commitment to excellence. Explore my work, and let's connect to discuss how I can contribute to your next big project!`;
 
-export const RESUME_URL = process.env.RESUME_URL;
+export const RESUME_URL = process.env.NEXT_PUBLIC_RESUME_URL;
 
 export const ABOUT_TEXT = `Hello, I'm Ananthu M A, a dedicated MERN stack developer with a passion for creating scalable web applications and robust backends. With expertise in Node.js and Express.js, I thrive on building dynamic user interfaces using React.js. My problem-solving mindset, attention to detail, and ability to quickly adapt to new technologies enable me to deliver high-quality solutions in collaborative environments. Whether it's developing intricate hotel booking systems or comprehensive e-commerce platforms, I focus on leveraging the best practices and clean architecture to ensure maintainability and efficiency in my projects.`;
 
