@@ -45,13 +45,41 @@ const About = () => {
           initial={{ opacity: 0, x: 50 }}
           transition={{ duration: 1 }}
         >
-          <Card className="bg-white/10 backdrop-blur-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+          <Card className="bg-white/10 backdrop-blur-lg shadow-md p-6 hover:shadow-lg transition-shadow mb-6">
             <CardContent>
               <p className="text-lg font-light leading-relaxed text-neutral-400">
                 {ABOUT_TEXT}
               </p>
             </CardContent>
           </Card>
+
+          <div className="space-y-4">
+            {[
+              { name: "React", level: 95 },
+              { name: "Next.js", level: 90 },
+              { name: "TypeScript", level: 90 },
+              { name: "Node.js", level: 85 },
+              { name: "UI/UX", level: 80 },
+              { name: "Tailwind CSS", level: 85 },
+            ].map((skill, idx) => (
+              <div key={skill.name}>
+                <div className="flex justify-between mb-1">
+                  <span className="text-white font-medium">{skill.name}</span>
+                  <span className="text-cyan-400 font-mono">
+                    {skill.level}%
+                  </span>
+                </div>
+                <div className="w-full h-3 bg-neutral-800 rounded-full overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1.2, delay: idx * 0.2 }}
+                    className="h-3 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-full shadow"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
