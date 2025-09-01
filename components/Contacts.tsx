@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaInbox, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/tooltip";
 
 const Contacts = () => {
+  const [submitted, setSubmitted] = useState(false);
   return (
     <section className="border-b border-neutral-800 pb-16 px-4 sm:px-6 lg:px-16">
       <motion.h2
@@ -31,17 +32,66 @@ const Contacts = () => {
       >
         <Card className="mt-8 bg-white/10 backdrop-blur-lg shadow-md p-6 text-center transition-transform duration-300 hover:scale-105 hover:shadow-cyan-500/50">
           <CardContent>
-            {/* Contact Message */}
-            <p className="text-lg text-neutral-400">
-              Feel free to reach out via any platform below!
+            <p className="text-lg text-neutral-400 mb-4">
+              Feel free to reach out via any platform below or send a direct
+              message!
             </p>
+            <motion.form
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="flex flex-col gap-4 items-center max-w-md mx-auto mb-8"
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSubmitted(true);
+              }}
+            >
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-full px-4 py-2 rounded bg-neutral-900 text-white border border-neutral-700 focus:border-cyan-400 outline-none transition"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="w-full px-4 py-2 rounded bg-neutral-900 text-white border border-neutral-700 focus:border-cyan-400 outline-none transition"
+                required
+              />
+              <textarea
+                placeholder="Your Message"
+                className="w-full px-4 py-2 rounded bg-neutral-900 text-white border border-neutral-700 focus:border-cyan-400 outline-none transition"
+                rows={4}
+                required
+              />
+              <Button
+                type="submit"
+                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold"
+              >
+                Send Message
+              </Button>
+              {typeof submitted !== "undefined" && submitted && (
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-green-400 mt-2"
+                >
+                  Thank you! Your message has been sent.
+                </motion.p>
+              )}
+            </motion.form>
 
-            <div className="mt-6 flex items-center justify-center gap-6 text-3xl text-neutral-400">
+            <div className="mt-6 flex items-center justify-center gap-8 text-3xl text-neutral-400">
               <TooltipProvider>
                 <Tooltip>
                   <TooltipTrigger>
                     <Link href={CONTACT.linkedin || "#"} target="_blank">
-                      <FaLinkedin className="hover:text-blue-500 transition-all duration-200" />
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 8 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <FaLinkedin className="hover:text-blue-500 transition-all duration-200" />
+                      </motion.div>
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>LinkedIn</TooltipContent>
@@ -50,7 +100,12 @@ const Contacts = () => {
                 <Tooltip>
                   <TooltipTrigger>
                     <Link href={CONTACT.github || "#"} target="_blank">
-                      <FaGithub className="hover:text-gray-500 transition-all duration-200" />
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 8 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <FaGithub className="hover:text-gray-500 transition-all duration-200" />
+                      </motion.div>
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>GitHub</TooltipContent>
@@ -59,7 +114,12 @@ const Contacts = () => {
                 <Tooltip>
                   <TooltipTrigger>
                     <Link href={CONTACT.instagram || "#"} target="_blank">
-                      <FaInstagram className="hover:text-pink-500 transition-all duration-200" />
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 8 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <FaInstagram className="hover:text-pink-500 transition-all duration-200" />
+                      </motion.div>
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>Instagram</TooltipContent>
@@ -68,7 +128,12 @@ const Contacts = () => {
                 <Tooltip>
                   <TooltipTrigger>
                     <Link href={`mailto:${CONTACT.email}`} target="_blank">
-                      <FaInbox className="hover:text-red-500 transition-all duration-200" />
+                      <motion.div
+                        whileHover={{ scale: 1.2, rotate: 8 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        <FaInbox className="hover:text-red-500 transition-all duration-200" />
+                      </motion.div>
                     </Link>
                   </TooltipTrigger>
                   <TooltipContent>Email</TooltipContent>
