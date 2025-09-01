@@ -7,6 +7,8 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
+import Blog from "@/components/Blog";
+import Certifications from "@/components/Certifications";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef } from "react";
 
@@ -43,6 +45,8 @@ export default function Home() {
         <Hero />
         <About />
         <Technologies />
+        <Blog />
+        <Certifications />
         <Experiences />
         <Projects />
         <Contacts />
