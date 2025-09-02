@@ -62,13 +62,13 @@ const About = () => {
         >
           <div className="space-y-5">
             {[
-              { name: "React", level: 95 },
+              { name: "React.js", level: 95 },
               { name: "Next.js", level: 90 },
               { name: "TypeScript", level: 90 },
               { name: "Node.js", level: 85 },
-              { name: "UI/UX", level: 80 },
               { name: "Tailwind CSS", level: 85 },
               { name: "MongoDB", level: 80 },
+              { name: "UI/UX Design", level: 80 },
             ].map((skill, idx) => (
               <div key={skill.name}>
                 <div className="flex justify-between mb-1">
