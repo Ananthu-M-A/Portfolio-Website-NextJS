@@ -20,7 +20,7 @@ const Contacts = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="mt-20 text-center text-4xl sm:text-5xl font-bold"
+        className="my-12 text-center text-4xl sm:text-5xl font-bold"
       >
         Get in Touch
       </motion.h2>
