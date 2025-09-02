@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 
 const roles = [
   "Full Stack Developer",
-  "UI/UX Enthusiast",
-  "Tech Explorer",
-  "Open Source Contributor",
+  "MERN Stack Engineer",
+  "Next.js / Nest.js Specialist",
+  "Web Application Architect",
+  "UI/UX-Oriented Developer",
 ];
 
 function useTypewriter(words: string[], speed = 120) {
