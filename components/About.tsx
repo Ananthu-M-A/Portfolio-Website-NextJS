@@ -20,13 +20,28 @@ const About = () => {
           Me
         </span>
       </motion.h2>
-
-      <div className="flex flex-col lg:flex-row items-center gap-8">
+      <div className="w-full flex justify-center mb-10">
         <motion.div
-          className="w-full lg:w-1/2 flex justify-center"
-          whileInView={{ opacity: 1, scale: 1 }}
-          initial={{ opacity: 0, scale: 0.9 }}
-          transition={{ duration: 1 }}
+          className="w-full max-w-6xl"
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <Card className="bg-white/10 backdrop-blur-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <CardContent>
+              <p className="text-lg font-light leading-relaxed text-neutral-400 text-center">
+                {ABOUT_TEXT}
+              </p>
+            </CardContent>
+          </Card>
+        </motion.div>
+      </div>
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10 w-full">
+        <motion.div
+          className="w-full md:w-1/2 flex justify-center"
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
         >
           <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-lg overflow-hidden shadow-lg bg-white/10 backdrop-blur-lg hover:shadow-xl transition-shadow">
             <Image
@@ -40,20 +55,12 @@ const About = () => {
         </motion.div>
 
         <motion.div
-          className="w-full lg:w-1/2"
+          className="w-full md:w-1/2"
+          initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 50 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.8 }}
         >
-          <Card className="bg-white/10 backdrop-blur-lg shadow-md p-6 hover:shadow-lg transition-shadow mb-6">
-            <CardContent>
-              <p className="text-lg font-light leading-relaxed text-neutral-400">
-                {ABOUT_TEXT}
-              </p>
-            </CardContent>
-          </Card>
-
-          <div className="space-y-4">
+          <div className="space-y-5">
             {[
               { name: "React", level: 95 },
               { name: "Next.js", level: 90 },
@@ -61,6 +68,7 @@ const About = () => {
               { name: "Node.js", level: 85 },
               { name: "UI/UX", level: 80 },
               { name: "Tailwind CSS", level: 85 },
+              { name: "MongoDB", level: 80 },
             ].map((skill, idx) => (
               <div key={skill.name}>
                 <div className="flex justify-between mb-1">
