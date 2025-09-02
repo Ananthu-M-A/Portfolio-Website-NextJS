@@ -3,6 +3,7 @@ import project2 from "../public/projects/project-2.png";
 import project3 from "../public/projects/project-3.png";
 import project4 from "../public/projects/project-4.png";
 import project5 from "../public/projects/project-5.png";
+import noimage from "../public/projects/no-img-available.jpg";
 
 export const HERO_CONTENT = `Welcome to my portfolio! I'm Ananthu M A, a skilled MERN stack developer with a comprehensive understanding of front-end and back-end technologies. My journey in tech began with a Diploma in Electronics Engineering, and I further honed my skills in computer science and software development through intensive training. With a knack for problem-solving and a keen eye for detail, I specialize in building scalable and efficient web applications. My portfolio showcases a range of projects, from complex e-commerce platforms to innovative hotel booking systems, demonstrating my versatility and commitment to excellence. Explore my work, and let's connect to discuss how I can contribute to your next big project!`;
 
@@ -20,41 +21,91 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "Portfolio Website",
+    title: "Portfolio",
     website: process.env.PORTFOLIO_URL,
     image: project4,
-    description: "A personal portfolio website showcasing my skills, projects, and professional journey. The site includes sections for about me, projects, skills, and contact information.",
-    technologies: ["Next.js", "TypeScript", "Tailwind", "Framer Motion"]
+    description: "Showcases my skills, projects, and professional journey with responsive design and animations.",
+    technologies: ["Next.js", "React", "TS", "Tailwind", "Framer Motion"]
   },
   {
-    title: "Wanderlust Hotel Booking Platform",
+    title: "Wanderlust",
     website: process.env.WANDERLUST_URL,
     image: project2,
-    description: "A cutting-edge platform for booking hotels with a chatbot system for hotel and restaurant reservations, featuring an admin panel for user, booking, and payment monitoring.",
-    technologies: ["TypeScript", "Tailwind", "Stripe", "Socket.IO", "Vercel", "JWT", "Axios", "Cloudinary", "React-Chatbotify", "Google Places API"]
+    description: "Hotel & restaurant booking platform with live chat, chatbot, and payment integration.",
+    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Stripe", "Socket.IO"]
   },
   {
-    title: "E-Learning Platform ( Launching Soon )",
+    title: "E-Learning",
     website: process.env.ELEARNING_URL,
     image: project5,
-    description: "An online learning platform designed to offer courses and educational content, featuring user authentication, course management, and a clean, user-friendly interface.",
-    technologies: ["React.js", "TypeScript", "Tailwind"]
+    description: "Online courses platform with authentication, course management, and progress tracking.",
+    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"]
   },
   {
-    title: "Password Generator Online ( Undergoing Maintenance )",
+    title: "Password Generator",
     website: process.env.PSWD_GENERATOR_URL,
     image: project3,
-    description: "A web application that generates strong, customizable passwords.",
-    technologies: ["React.js", "Express.js", "MongoDB", "TypeScript", "Tailwind"]
+    description: "Generates strong passwords with authentication and storage.",
+    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"]
   },
   {
-    title: "Smart Depot E-Commerce Platform",
+    title: "Smart Depot",
     website: process.env.SMARTDEPOT_URL,
     image: project1,
-    description: "An e-commerce platform designed for smartphone service engineers and trainers to purchase repair tools and spare parts, featuring secure payment integration and cloud deployment.",
-    technologies: ["EJS", "Bootstrap", "Razorpay", "MVC", "Mongoose", "Chart.js", "Nodemailer"]
+    description: "E-commerce platform for service engineers with secure checkout and order tracking.",
+    technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Razorpay", "Chart.js"]
   },
+  {
+    title: "Refix Garage",
+    website: process.env.REFIX_URL,
+    image: noimage,
+    description: "Garage management system with service tracking, billing, and analytics.",
+    technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Chart.js"]
+  },
+  {
+    title: "Interview App",
+    website: process.env.INTERVIEW_URL,
+    image: noimage,
+    description: "Practice interviews with slot booking, user management, and real-time communication.",
+    technologies: ["Next.js", "Nest.js", "MongoDB", "Socket.IO", "Tailwind"]
+  },
+  {
+    title: "Hit the Smiley",
+    website: process.env.HIT_SMILEY_URL,
+    image: noimage,
+    description: "Interactive game with score tracking, animations, and responsive design.",
+    technologies: ["React", "TS", "Redux", "GSAP", "Tailwind"]
+  },
+  {
+    title: "Netflix Clone",
+    website: process.env.NETFLIX_CLONE_URL,
+    image: noimage,
+    description: "React-based Netflix clone with API integration and responsive UI.",
+    technologies: ["React", "CSS", "Axios", "JS"]
+  },
+  {
+    title: "Weather App",
+    website: process.env.WEATHER_URL,
+    image: noimage,
+    description: "Displays current weather using API integration.",
+    technologies: ["HTML", "CSS", "JS", "API"]
+  },
+  {
+    title: "Demo Portfolio",
+    website: process.env.DEMO_PORTFOLIO_URL,
+    image: noimage,
+    description: "Bootstrap-based portfolio template with contact form.",
+    technologies: ["HTML", "CSS", "Bootstrap"]
+  },
+  {
+    title: "README Generator",
+    website: process.env.README_GENERATOR_URL,
+    image: noimage,
+    description: "Generates professional GitHub README files with AI integration.",
+    technologies: ["Next.js", "TS", "Tailwind"]
+  }
 ];
+
 
 export const CONTACT = {
   linkedin: process.env.LINKEDIN,
