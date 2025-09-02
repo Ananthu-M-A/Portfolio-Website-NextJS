@@ -6,7 +6,6 @@ import {
   RiTailwindCssLine,
   RiHtml5Line,
 } from "react-icons/ri";
-import { SiExpress, SiMongodb } from "react-icons/si";
 import { motion, Variants } from "framer-motion";
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,6 +15,18 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import {
+  SiExpress,
+  SiMongodb,
+  SiTypescript,
+  SiRedux,
+  SiNestjs,
+  SiSocketdotio,
+  SiFramer,
+  SiStripe,
+  SiFirebase,
+  SiChartdotjs,
+} from "react-icons/si";
 
 const iconVariants = (duration: number): Variants => ({
   initial: { y: -10 },
@@ -33,17 +44,7 @@ const iconVariants = (duration: number): Variants => ({
 const technologies = [
   {
     icon: <RiReactjsLine className="text-cyan-400" />,
-    name: "React",
-    duration: 2.5,
-  },
-  {
-    icon: <FaNodeJs className="text-green-500" />,
-    name: "Node.js",
-    duration: 2.8,
-  },
-  {
-    icon: <SiExpress className="text-green-800" />,
-    name: "Express.js",
+    name: "React.js",
     duration: 2.5,
   },
   {
@@ -52,8 +53,48 @@ const technologies = [
     duration: 2.8,
   },
   {
+    icon: <SiRedux className="text-purple-600" />,
+    name: "Redux",
+    duration: 2.5,
+  },
+  {
+    icon: <RiTailwindCssLine className="text-cyan-400" />,
+    name: "Tailwind CSS",
+    duration: 2.8,
+  },
+  {
+    icon: <SiFramer className="text-pink-500" />,
+    name: "Framer Motion",
+    duration: 2.5,
+  },
+  {
     icon: <RiJavascriptLine className="text-yellow-300" />,
     name: "JavaScript",
+    duration: 2.8,
+  },
+  {
+    icon: <SiTypescript className="text-blue-500" />,
+    name: "TypeScript",
+    duration: 2.5,
+  },
+  {
+    icon: <RiHtml5Line className="text-orange-500" />,
+    name: "HTML5",
+    duration: 2.8,
+  },
+  {
+    icon: <FaNodeJs className="text-green-500" />,
+    name: "Node.js",
+    duration: 2.5,
+  },
+  {
+    icon: <SiExpress className="text-green-800" />,
+    name: "Express.js",
+    duration: 2.8,
+  },
+  {
+    icon: <SiNestjs className="text-red-500" />,
+    name: "Nest.js",
     duration: 2.5,
   },
   {
@@ -62,13 +103,23 @@ const technologies = [
     duration: 2.8,
   },
   {
-    icon: <RiTailwindCssLine className="text-cyan-400" />,
-    name: "Tailwind CSS",
+    icon: <SiFirebase className="text-yellow-400" />,
+    name: "Firebase",
     duration: 2.5,
   },
   {
-    icon: <RiHtml5Line className="text-cyan-400" />,
-    name: "HTML5",
+    icon: <SiSocketdotio className="text-purple-400" />,
+    name: "Socket.IO",
+    duration: 2.8,
+  },
+  {
+    icon: <SiChartdotjs className="text-blue-600" />,
+    name: "Chart.js",
+    duration: 2.5,
+  },
+  {
+    icon: <SiStripe className="text-blue-500" />,
+    name: "Stripe",
     duration: 2.8,
   },
 ];
