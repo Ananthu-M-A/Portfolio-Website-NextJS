@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaInbox, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
@@ -11,9 +11,19 @@ import {
   TooltipContent,
   TooltipProvider,
 } from "@/components/ui/tooltip";
+import PulseLoader from "./ui/PulseLoader";
 
 const Contacts = () => {
   const [submitted, setSubmitted] = useState(false);
+
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 400);
+  }, []);
+  if (!loaded) {
+    return <PulseLoader />;
+  }
+
   return (
     <section className="border-b border-neutral-800 pb-16 px-4 sm:px-6 lg:px-16">
       <motion.h2

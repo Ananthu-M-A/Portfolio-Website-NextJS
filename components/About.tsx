@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import PulseLoader from "@/components/ui/PulseLoader";
 import aboutImg from "../public/about.png";
 import { ABOUT_TEXT } from "@/config/constants";
 import { motion } from "framer-motion";
@@ -6,6 +7,15 @@ import Image, { StaticImageData } from "next/legacy/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 const About = () => {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    const img = new window.Image();
+    img.src = aboutImg.src;
+    img.onload = () => setLoaded(true);
+  }, []);
+  if (!loaded) {
+    return <PulseLoader />;
+  }
   return (
     <section className="border-b border-neutral-800 pb-16 px-4 sm:px-6 lg:px-16">
       <motion.h2

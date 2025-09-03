@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PulseLoader from "@/components/ui/PulseLoader";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -36,6 +37,16 @@ function useTypewriter(words: string[], speed = 120) {
 
 const Hero = () => {
   const typewriter = useTypewriter(roles);
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    // Simulate image/content load
+    const img = new window.Image();
+    img.src = "/profile.jpg";
+    img.onload = () => setLoaded(true);
+  }, []);
+  if (!loaded) {
+    return <PulseLoader />;
+  }
   return (
     <section className="relative w-full flex flex-col items-center justify-center py-16 overflow-hidden">
       <motion.div

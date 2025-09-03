@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import PulseLoader from "./ui/PulseLoader";
 
 interface MediumArticle {
   title: string;
@@ -23,6 +24,14 @@ const Blog = () => {
         setLoading(false);
       });
   }, []);
+
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 400);
+  }, []);
+  if (!loaded) {
+    return <PulseLoader />;
+  }
 
   return (
     <section className="border-b border-neutral-800 pb-16 px-4 sm:px-6 lg:px-16">

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import PulseLoader from "@/components/ui/PulseLoader";
 import { PROJECTS } from "../config/constants";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
@@ -8,7 +9,13 @@ import Image, { StaticImageData } from "next/image";
 
 const Projects = () => {
   const [selected, setSelected] = useState<number | null>(null);
-
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 400);
+  }, []);
+  if (!loaded) {
+    return <PulseLoader />;
+  }
   return (
     <section className="border-b border-neutral-800 pb-16 px-4 sm:px-6 lg:px-16">
       <motion.h2

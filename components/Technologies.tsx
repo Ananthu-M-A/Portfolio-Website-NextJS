@@ -7,7 +7,8 @@ import {
   RiHtml5Line,
 } from "react-icons/ri";
 import { motion, Variants } from "framer-motion";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import PulseLoader from "@/components/ui/PulseLoader";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Tooltip,
@@ -125,6 +126,13 @@ const technologies = [
 ];
 
 const Technologies = () => {
+  const [loaded, setLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setLoaded(true), 400);
+  }, []);
+  if (!loaded) {
+    return <PulseLoader />;
+  }
   return (
     <section className="border-b border-neutral-800 pb-24 px-4 sm:px-6 lg:px-16">
       <motion.h2
