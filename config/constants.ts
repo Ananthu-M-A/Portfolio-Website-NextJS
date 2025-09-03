@@ -1,8 +1,6 @@
-import project1 from "../public/projects/project-1.png";
 import project2 from "../public/projects/project-2.png";
-import project3 from "../public/projects/project-3.png";
 import project4 from "../public/projects/project-4.png";
-import project5 from "../public/projects/project-5.png";
+import project12 from "../public/projects/project-12.png";
 import noimage from "../public/projects/no-img-available.jpg";
 
 export const HERO_CONTENT = `Welcome to my portfolio! I'm Ananthu M A, a skilled MERN stack developer with a comprehensive understanding of front-end and back-end technologies. My journey in tech began with a Diploma in Electronics Engineering, and I further honed my skills in computer science and software development through intensive training. With a knack for problem-solving and a keen eye for detail, I specialize in building scalable and efficient web applications. My portfolio showcases a range of projects, from complex e-commerce platforms to innovative hotel booking systems, demonstrating my versatility and commitment to excellence. Explore my work, and let's connect to discuss how I can contribute to your next big project!`;
@@ -37,21 +35,21 @@ export const PROJECTS = [
   {
     title: "E-Learning",
     website: process.env.ELEARNING_URL,
-    image: project5,
+    image: noimage,
     description: "Online courses platform with authentication, course management, and progress tracking.",
     technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"]
   },
   {
     title: "Password Generator",
     website: process.env.PSWD_GENERATOR_URL,
-    image: project3,
+    image: noimage,
     description: "Generates strong passwords with authentication and storage.",
     technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"]
   },
   {
     title: "Smart Depot",
     website: process.env.SMARTDEPOT_URL,
-    image: project1,
+    image: noimage,
     description: "E-commerce platform for service engineers with secure checkout and order tracking.",
     technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Razorpay", "Chart.js"]
   },
@@ -100,7 +98,7 @@ export const PROJECTS = [
   {
     title: "README Generator",
     website: process.env.README_GENERATOR_URL,
-    image: noimage,
+    image: project12,
     description: "Generates professional GitHub README files with AI integration.",
     technologies: ["Next.js", "TS", "Tailwind"]
   }
