@@ -1,5 +1,6 @@
 import project2 from "../public/projects/project-2.png";
 import project4 from "../public/projects/project-4.png";
+import project6 from "../public/projects/project-6.png";
 import project12 from "../public/projects/project-12.png";
 import noimage from "../public/projects/no-img-available.jpg";
 
@@ -56,7 +57,7 @@ export const PROJECTS = [
   {
     title: "Refix Garage",
     website: process.env.REFIX_URL,
-    image: noimage,
+    image: project6,
     description: "Garage management system with service tracking, billing, and analytics.",
     technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Chart.js"]
   },
