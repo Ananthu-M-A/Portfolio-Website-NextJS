@@ -119,8 +119,8 @@ export const PROJECTS = [
 
 
 export const CONTACT = {
-  linkedin: process.env.LINKEDIN,
-  github: process.env.GITHUB,
-  email: process.env.EMAIL,
-  instagram: process.env.INSTAGRAM,
+  linkedin: process.env.NEXT_PUBLIC_LINKEDIN,
+  github: process.env.NEXT_PUBLIC_GITHUB,
+  email: process.env.NEXT_PUBLIC_EMAIL,
+  instagram: process.env.NEXT_PUBLIC_INSTAGRAM,
 };
