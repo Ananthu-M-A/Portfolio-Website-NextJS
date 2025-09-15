@@ -21,88 +21,88 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "Portfolio",
-    website: process.env.PORTFOLIO_URL,
+    website: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
     image: project4,
     description: "Showcases my skills, projects, and professional journey with responsive design and animations.",
     technologies: ["Next.js", "React", "TS", "Tailwind", "Framer Motion"]
   },
   {
     title: "Wanderlust",
-    website: process.env.WANDERLUST_URL,
+    website: process.env.NEXT_PUBLIC_WANDERLUST_URL,
     image: project2,
     description: "Hotel & restaurant booking platform with live chat, chatbot, and payment integration.",
-    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Stripe", "Socket.IO"]
-  },
-  {
-    title: "E-Learning",
-    website: process.env.ELEARNING_URL,
-    image: noimage,
-    description: "Online courses platform with authentication, course management, and progress tracking.",
-    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"]
-  },
-  {
-    title: "Password Generator",
-    website: process.env.PSWD_GENERATOR_URL,
-    image: noimage,
-    description: "Generates strong passwords with authentication and storage.",
-    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"]
-  },
-  {
-    title: "Smart Depot",
-    website: process.env.SMARTDEPOT_URL,
-    image: noimage,
-    description: "E-commerce platform for service engineers with secure checkout and order tracking.",
-    technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Razorpay", "Chart.js"]
+    technologies: ["React", "Node", "Express", "Tailwind", "MongoDB", "Stripe", "Socket.IO"]
   },
   {
     title: "Refix Garage",
-    website: process.env.REFIX_URL,
+    website: process.env.NEXT_PUBLIC_REFIX_GARAGE_URL,
     image: project6,
-    description: "Garage management system with service tracking, billing, and analytics.",
+    description: "Smartphone service center management system with service tracking, billing, and analytics.",
     technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Chart.js"]
   },
   {
-    title: "Interview App",
-    website: process.env.INTERVIEW_URL,
-    image: noimage,
-    description: "Practice interviews with slot booking, user management, and real-time communication.",
-    technologies: ["Next.js", "Nest.js", "MongoDB", "Socket.IO", "Tailwind"]
-  },
-  {
-    title: "Hit the Smiley",
-    website: process.env.HIT_SMILEY_URL,
-    image: noimage,
-    description: "Interactive game with score tracking, animations, and responsive design.",
-    technologies: ["React", "TS", "Redux", "GSAP", "Tailwind"]
-  },
-  {
-    title: "Netflix Clone",
-    website: process.env.NETFLIX_CLONE_URL,
-    image: noimage,
-    description: "React-based Netflix clone with API integration and responsive UI.",
-    technologies: ["React", "CSS", "Axios", "JS"]
-  },
-  {
-    title: "Weather App",
-    website: process.env.WEATHER_URL,
-    image: noimage,
-    description: "Displays current weather using API integration.",
-    technologies: ["HTML", "CSS", "JS", "API"]
-  },
-  {
-    title: "Demo Portfolio",
-    website: process.env.DEMO_PORTFOLIO_URL,
-    image: noimage,
-    description: "Bootstrap-based portfolio template with contact form.",
-    technologies: ["HTML", "CSS", "Bootstrap"]
-  },
-  {
     title: "README Generator",
-    website: process.env.README_GENERATOR_URL,
+    website: process.env.NEXT_PUBLIC_README_GENERATOR_URL,
     image: project12,
     description: "Generates professional GitHub README files with AI integration.",
     technologies: ["Next.js", "TS", "Tailwind"]
   }
+  // {
+  //   title: "E-Learning",
+  //   website: process.env.NEXT_PUBLIC_ELEARNING_URL,
+  //   image: noimage,
+  //   description: "Online courses platform with authentication, course management, and progress tracking.",
+  //   technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"]
+  // },
+  // {
+  //   title: "Password Generator",
+  //   website: process.env.NEXT_PUBLIC_PSWD_GENERATOR_URL,
+  //   image: noimage,
+  //   description: "Generates strong passwords with authentication and storage.",
+  //   technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"]
+  // },
+  // {
+  //   title: "Smart Depot",
+  //   website: process.env.NEXT_PUBLIC_SMARTDEPOT_URL,
+  //   image: noimage,
+  //   description: "E-commerce platform for service engineers with secure checkout and order tracking.",
+  //   technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Razorpay", "Chart.js"]
+  // },
+  // {
+  //   title: "Interview App",
+  //   website: process.env.NEXT_PUBLIC_INTERVIEW_URL,
+  //   image: noimage,
+  //   description: "Practice interviews with slot booking, user management, and real-time communication.",
+  //   technologies: ["Next.js", "Nest.js", "MongoDB", "Socket.IO", "Tailwind"]
+  // },
+  // {
+  //   title: "Hit the Smiley",
+  //   website: process.env.NEXT_PUBLIC_HIT_SMILEY_URL,
+  //   image: noimage,
+  //   description: "Interactive game with score tracking, animations, and responsive design.",
+  //   technologies: ["React", "TS", "Redux", "GSAP", "Tailwind"]
+  // },
+  // {
+  //   title: "Netflix Clone",
+  //   website: process.env.NEXT_PUBLIC_NETFLIX_CLONE_URL,
+  //   image: noimage,
+  //   description: "React-based Netflix clone with API integration and responsive UI.",
+  //   technologies: ["React", "CSS", "Axios", "JS"]
+  // },
+  // {
+  //   title: "Weather App",
+  //   website: process.env.NEXT_PUBLIC_WEATHER_URL,
+  //   image: noimage,
+  //   description: "Displays current weather using API integration.",
+  //   technologies: ["HTML", "CSS", "JS", "API"]
+  // },
+  // {
+  //   title: "Demo Portfolio",
+  //   website: process.env.NEXT_PUBLIC_DEMO_PORTFOLIO_URL,
+  //   image: noimage,
+  //   description: "Bootstrap-based portfolio template with contact form.",
+  //   technologies: ["HTML", "CSS", "Bootstrap"]
+  // },
 ];
 
 
