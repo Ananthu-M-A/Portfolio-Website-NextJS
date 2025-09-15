@@ -22,6 +22,7 @@ export const PROJECTS = [
   {
     title: "Portfolio",
     website: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
+    github: process.env.NEXT_PUBLIC_PORTFOLIO_GITHUB,
     image: project4,
     description: "Showcases my skills, projects, and professional journey with responsive design and animations.",
     technologies: ["Next.js", "React", "TS", "Tailwind", "Framer Motion"]
@@ -29,6 +30,7 @@ export const PROJECTS = [
   {
     title: "Wanderlust",
     website: process.env.NEXT_PUBLIC_WANDERLUST_URL,
+    github: process.env.NEXT_PUBLIC_WANDERLUST_GITHUB,
     image: project2,
     description: "Hotel & restaurant booking platform with live chat, chatbot, and payment integration.",
     technologies: ["React", "Node", "Express", "Tailwind", "MongoDB", "Stripe", "Socket.IO"]
@@ -36,73 +38,83 @@ export const PROJECTS = [
   {
     title: "Refix Garage",
     website: process.env.NEXT_PUBLIC_REFIX_GARAGE_URL,
+    github: process.env.NEXT_PUBLIC_REFIX_GARAGE_GITHUB,
     image: project6,
     description: "Smartphone service center management system with service tracking, billing, and analytics.",
     technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Chart.js"]
   },
   {
+    title: "Hit the Smiley",
+    website: process.env.NEXT_PUBLIC_HIT_SMILEY_URL,
+    github: process.env.NEXT_PUBLIC_HIT_SMILEY_GITHUB,
+    image: noimage,
+    description: "Interactive game with animations, score tracking & responsive design.",
+    technologies: ["React", "TS", "Redux", "GSAP", "Tailwind"]
+  },
+  {
     title: "README Generator",
     website: process.env.NEXT_PUBLIC_README_GENERATOR_URL,
+    github: process.env.NEXT_PUBLIC_README_GENERATOR_GITHUB,
     image: project12,
     description: "Generates professional GitHub README files with AI integration.",
-    technologies: ["Next.js", "TS", "Tailwind"]
-  }
-  // {
-  //   title: "E-Learning",
-  //   website: process.env.NEXT_PUBLIC_ELEARNING_URL,
-  //   image: noimage,
-  //   description: "Online courses platform with authentication, course management, and progress tracking.",
-  //   technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"]
-  // },
-  // {
-  //   title: "Password Generator",
-  //   website: process.env.NEXT_PUBLIC_PSWD_GENERATOR_URL,
-  //   image: noimage,
-  //   description: "Generates strong passwords with authentication and storage.",
-  //   technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"]
-  // },
-  // {
-  //   title: "Smart Depot",
-  //   website: process.env.NEXT_PUBLIC_SMARTDEPOT_URL,
-  //   image: noimage,
-  //   description: "E-commerce platform for service engineers with secure checkout and order tracking.",
-  //   technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Razorpay", "Chart.js"]
-  // },
-  // {
-  //   title: "Interview App",
-  //   website: process.env.NEXT_PUBLIC_INTERVIEW_URL,
-  //   image: noimage,
-  //   description: "Practice interviews with slot booking, user management, and real-time communication.",
-  //   technologies: ["Next.js", "Nest.js", "MongoDB", "Socket.IO", "Tailwind"]
-  // },
-  // {
-  //   title: "Hit the Smiley",
-  //   website: process.env.NEXT_PUBLIC_HIT_SMILEY_URL,
-  //   image: noimage,
-  //   description: "Interactive game with score tracking, animations, and responsive design.",
-  //   technologies: ["React", "TS", "Redux", "GSAP", "Tailwind"]
-  // },
-  // {
-  //   title: "Netflix Clone",
-  //   website: process.env.NEXT_PUBLIC_NETFLIX_CLONE_URL,
-  //   image: noimage,
-  //   description: "React-based Netflix clone with API integration and responsive UI.",
-  //   technologies: ["React", "CSS", "Axios", "JS"]
-  // },
-  // {
-  //   title: "Weather App",
-  //   website: process.env.NEXT_PUBLIC_WEATHER_URL,
-  //   image: noimage,
-  //   description: "Displays current weather using API integration.",
-  //   technologies: ["HTML", "CSS", "JS", "API"]
-  // },
-  // {
-  //   title: "Demo Portfolio",
-  //   website: process.env.NEXT_PUBLIC_DEMO_PORTFOLIO_URL,
-  //   image: noimage,
-  //   description: "Bootstrap-based portfolio template with contact form.",
-  //   technologies: ["HTML", "CSS", "Bootstrap"]
-  // },
+    technologies: ["Next.js", "TS", "Tailwind", "Gemini AI"]
+  },
+  {
+    title: "Password Generator",
+    website: process.env.NEXT_PUBLIC_PSWD_GENERATOR_URL,
+    github: process.env.NEXT_PUBLIC_PSWD_GENERATOR_GITHUB,
+    image: noimage,
+    description: "Generates strong passwords with authentication and storage.",
+    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"]
+  },
+  {
+    title: "Smart Depot",
+    website: process.env.NEXT_PUBLIC_SMARTDEPOT_URL,
+    github: process.env.NEXT_PUBLIC_SMARTDEPOT_GITHUB,
+    image: noimage,
+    description: "E-commerce platform for service engineers with secure checkout and order tracking.",
+    technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Razorpay", "Chart.js"]
+  },
+  {
+    title: "Confidently",
+    website: process.env.NEXT_PUBLIC_CONFIDENTLY_URL,
+    github: process.env.NEXT_PUBLIC_CONFIDENTLY_GITHUB,
+    image: noimage,
+    description: "Practice interviews with slot booking, user management, and real-time communication.",
+    technologies: ["Next.js", "Nest.js", "MongoDB", "Socket.IO", "Tailwind"]
+  },
+  {
+    title: "E-Learning",
+    website: process.env.NEXT_PUBLIC_ELEARNING_URL,
+    github: process.env.NEXT_PUBLIC_ELEARNING_GITHUB,
+    image: noimage,
+    description: "Online courses platform with course management, progress tracking, and authentication.",
+    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"]
+  },
+  {
+    title: "Netflix Clone",
+    website: process.env.NEXT_PUBLIC_NETFLIX_CLONE_URL,
+    github: process.env.NEXT_PUBLIC_NETFLIX_CLONE_GITHUB,
+    image: noimage,
+    description: "React-based Netflix clone with API integration and responsive UI.",
+    technologies: ["React", "CSS", "Axios", "JS"]
+  },
+  {
+    title: "Weather App",
+    website: process.env.NEXT_PUBLIC_WEATHER_URL,
+    github: process.env.NEXT_PUBLIC_WEATHER_GITHUB,
+    image: noimage,
+    description: "Displays current weather using API integration.",
+    technologies: ["HTML", "CSS", "JS", "API"]
+  },
+  {
+    title: "Demo Portfolio",
+    website: process.env.NEXT_PUBLIC_DEMO_PORTFOLIO_URL,
+    github: process.env.NEXT_PUBLIC_DEMO_PORTFOLIO_GITHUB,
+    image: noimage,
+    description: "Bootstrap-based portfolio template with contact form.",
+    technologies: ["HTML", "CSS", "Bootstrap"]
+  },
 ];
 
 

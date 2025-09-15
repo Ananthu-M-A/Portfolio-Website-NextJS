@@ -74,15 +74,30 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <Button asChild variant="secondary" className="w-full">
-                  <a
-                    href={project.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Visit Project
-                  </a>
-                </Button>
+                <div className="flex gap-2 w-full">
+                  {project.website && (
+                    <Button asChild variant="secondary" className="w-full">
+                      <a
+                        href={project.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Visit Website
+                      </a>
+                    </Button>
+                  )}
+                  {project.github && (
+                    <Button asChild variant="outline" className="w-full">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Visit GitHub Repo
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </CardContent>
             </Card>
           </motion.div>
@@ -112,8 +127,12 @@ const Projects = () => {
               height={300}
               className="rounded-lg mb-4"
             />
-            <h3 className="text-2xl font-bold text-white mb-2">{PROJECTS[selected].title}</h3>
-            <p className="text-neutral-300 mb-4">{PROJECTS[selected].description}</p>
+            <h3 className="text-2xl font-bold text-white mb-2">
+              {PROJECTS[selected].title}
+            </h3>
+            <p className="text-neutral-300 mb-4">
+              {PROJECTS[selected].description}
+            </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {PROJECTS[selected].technologies.map((tech, idx) => (
                 <Badge
@@ -125,15 +144,30 @@ const Projects = () => {
                 </Badge>
               ))}
             </div>
-            <Button asChild variant="secondary" className="w-full">
-              <a
-                href={PROJECTS[selected].website}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit Project
-              </a>
-            </Button>
+            <div className="flex gap-2 w-full">
+              {PROJECTS[selected].website && (
+                <Button asChild variant="secondary" className="w-full">
+                  <a
+                    href={PROJECTS[selected].website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Website
+                  </a>
+                </Button>
+              )}
+              {PROJECTS[selected].github && (
+                <Button asChild variant="outline" className="w-full">
+                  <a
+                    href={PROJECTS[selected].github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit GitHub Repo
+                  </a>
+                </Button>
+              )}
+            </div>
           </motion.div>
         </div>
       )}
