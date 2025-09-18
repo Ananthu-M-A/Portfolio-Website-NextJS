@@ -1,7 +1,8 @@
+import project1 from "../public/projects/project-1.png";
 import project2 from "../public/projects/project-2.png";
-import project4 from "../public/projects/project-4.png";
-import project6 from "../public/projects/project-6.png";
-import project12 from "../public/projects/project-12.png";
+import project3 from "../public/projects/project-3.png";
+import project5 from "../public/projects/project-5.png";
+import project7 from "../public/projects/project-7.png";
 import noimage from "../public/projects/no-img-available.jpg";
 
 export const HERO_CONTENT = `Welcome to my portfolio! I'm Ananthu M A, a skilled MERN stack developer with a comprehensive understanding of front-end and back-end technologies. My journey in tech began with a Diploma in Electronics Engineering, and I further honed my skills in computer science and software development through intensive training. With a knack for problem-solving and a keen eye for detail, I specialize in building scalable and efficient web applications. My portfolio showcases a range of projects, from complex e-commerce platforms to innovative hotel booking systems, demonstrating my versatility and commitment to excellence. Explore my work, and let's connect to discuss how I can contribute to your next big project!`;
@@ -23,7 +24,7 @@ export const PROJECTS = [
     title: "Portfolio",
     website: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
     github: process.env.NEXT_PUBLIC_PORTFOLIO_GITHUB,
-    image: project4,
+    image: project1,
     description: "Showcases my skills, projects, and professional journey with responsive design and animations.",
     technologies: ["Next.js", "React", "TS", "Tailwind", "Framer Motion"]
   },
@@ -39,7 +40,7 @@ export const PROJECTS = [
     title: "Refix Garage",
     website: process.env.NEXT_PUBLIC_REFIX_GARAGE_URL,
     github: process.env.NEXT_PUBLIC_REFIX_GARAGE_GITHUB,
-    image: project6,
+    image: project3,
     description: "Smartphone service center management system with service tracking, billing, and analytics.",
     technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Chart.js"]
   },
@@ -55,7 +56,7 @@ export const PROJECTS = [
     title: "README Generator",
     website: process.env.NEXT_PUBLIC_README_GENERATOR_URL,
     github: process.env.NEXT_PUBLIC_README_GENERATOR_GITHUB,
-    image: project12,
+    image: project5,
     description: "Generates professional GitHub README files with AI integration.",
     technologies: ["Next.js", "TS", "Tailwind", "Gemini AI"]
   },
@@ -71,7 +72,7 @@ export const PROJECTS = [
     title: "Smart Depot",
     website: process.env.NEXT_PUBLIC_SMARTDEPOT_URL,
     github: process.env.NEXT_PUBLIC_SMARTDEPOT_GITHUB,
-    image: noimage,
+    image: project7,
     description: "E-commerce platform for service engineers with secure checkout and order tracking.",
     technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Razorpay", "Chart.js"]
   },

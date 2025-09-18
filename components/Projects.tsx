@@ -87,7 +87,7 @@ const Projects = () => {
                     </Button>
                   )}
                   {project.github && (
-                    <Button asChild variant="outline" className="w-full">
+                    <Button asChild variant="secondary" className="w-full">
                       <a
                         href={project.github}
                         target="_blank"
@@ -103,8 +103,6 @@ const Projects = () => {
           </motion.div>
         ))}
       </div>
-
-      {/* Modal Popup */}
       {selected !== null && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <motion.div
@@ -113,13 +111,13 @@ const Projects = () => {
             exit={{ scale: 0.8, opacity: 0 }}
             className="bg-neutral-900 rounded-xl shadow-2xl p-8 max-w-lg w-full relative"
           >
-            <button
-              className="absolute top-3 right-3 text-2xl text-white hover:text-cyan-400 transition"
+            <Button
+              className="absolute top-0 right-0 text-2xl bg-transparent text-white hover:text-cyan-400 hover:bg-transparent transition"
               onClick={() => setSelected(null)}
               aria-label="Close"
             >
               &times;
-            </button>
+            </Button>
             <Image
               src={(PROJECTS[selected].image as StaticImageData).src}
               alt={PROJECTS[selected].title}
@@ -157,7 +155,7 @@ const Projects = () => {
                 </Button>
               )}
               {PROJECTS[selected].github && (
-                <Button asChild variant="outline" className="w-full">
+                <Button asChild variant="secondary" className="w-full">
                   <a
                     href={PROJECTS[selected].github}
                     target="_blank"
