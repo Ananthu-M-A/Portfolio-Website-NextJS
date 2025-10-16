@@ -2,14 +2,7 @@ import React, { useState, useEffect } from "react";
 import PulseLoader from "@/components/ui/PulseLoader";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const roles = [
-  "Full Stack Developer",
-  "MERN Stack Engineer",
-  "Next.js / Nest.js Specialist",
-  "Web Application Architect",
-  "UI/UX-Oriented Developer",
-];
+import { ROLES } from "@/config/constants";
 
 function useTypewriter(words: string[], speed = 120) {
   const [index, setIndex] = useState<number>(0);
@@ -36,10 +29,9 @@ function useTypewriter(words: string[], speed = 120) {
 }
 
 const Hero = () => {
-  const typewriter = useTypewriter(roles);
+  const typewriter = useTypewriter(ROLES);
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    // Simulate image/content load
     const img = new window.Image();
     img.src = "/profile.jpg";
     img.onload = () => setLoaded(true);

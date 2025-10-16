@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PulseLoader from "@/components/ui/PulseLoader";
 import aboutImg from "../public/about.png";
-import { ABOUT_TEXT } from "@/config/constants";
+import { ABOUT_TEXT, SKILLS } from "@/config/constants";
 import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/legacy/image";
 import { Card, CardContent } from "@/components/ui/card";
@@ -71,15 +71,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="space-y-5">
-            {[
-              { name: "React.js", level: 95 },
-              { name: "Next.js", level: 90 },
-              { name: "TypeScript", level: 90 },
-              { name: "Node.js", level: 85 },
-              { name: "Tailwind CSS", level: 85 },
-              { name: "MongoDB", level: 80 },
-              { name: "UI/UX Design", level: 80 },
-            ].map((skill, idx) => (
+            {SKILLS.map((skill, idx) => (
               <div key={skill.name}>
                 <div className="flex justify-between mb-1">
                   <span className="text-white font-medium">{skill.name}</span>

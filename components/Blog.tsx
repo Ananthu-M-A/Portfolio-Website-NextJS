@@ -9,8 +9,7 @@ interface MediumArticle {
   description: string;
 }
 
-const MEDIUM_RSS =
-  "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ananthumapookkad";
+const MEDIUM_RSS = process.env.NEXT_PUBLIC_MEDIUM_RSS || "";
 
 const Blog = () => {
   const [articles, setArticles] = useState<MediumArticle[]>([]);

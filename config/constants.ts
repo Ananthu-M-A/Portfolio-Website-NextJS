@@ -125,3 +125,21 @@ export const CONTACT = {
   email: process.env.NEXT_PUBLIC_EMAIL,
   instagram: process.env.NEXT_PUBLIC_INSTAGRAM,
 };
+
+export const ROLES = [
+  "Full Stack Developer",
+  "MERN Stack Engineer",
+  "Next.js / Nest.js Specialist",
+  "Web Application Architect",
+  "UI/UX-Oriented Developer",
+];
+
+export const SKILLS = [
+  { name: "React.js", level: 95 },
+  { name: "Next.js", level: 90 },
+  { name: "TypeScript", level: 90 },
+  { name: "Node.js", level: 85 },
+  { name: "Tailwind CSS", level: 85 },
+  { name: "MongoDB", level: 80 },
+  { name: "UI/UX Design", level: 80 },
+];
