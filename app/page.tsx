@@ -8,9 +8,10 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
 import Blog from "@/components/Blog";
-import Certifications from "@/components/Certifications";
 import { cn } from "@/lib/utils";
 import { useEffect, useRef } from "react";
+// import Badges from "@/components/Badges";
+import Certificates from "@/components/Certificates";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -46,7 +47,8 @@ export default function Home() {
         <About />
         <Technologies />
         <Blog />
-        <Certifications />
+        {/* <Badges /> */}
+        <Certificates />
         <Experiences />
         <Projects />
         <Contacts />
