@@ -1,3 +1,4 @@
+import project0 from "../public/projects/project-0.png";
 import project1 from "../public/projects/project-1.png";
 import project2 from "../public/projects/project-2.png";
 import project3 from "../public/projects/project-3.png";
@@ -21,12 +22,28 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "Fix Your Phone",
+    website: process.env.NEXT_PUBLIC_FIXYOURPHONE_URL,
+    github: process.env.NEXT_PUBLIC_FIXYOURPHONE_GITHUB,
+    image: project0,
+    description: "A platform for mastering smartphone repair with professional guides, tools & more.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"]
+  },
+  {
     title: "Portfolio",
     website: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
     github: process.env.NEXT_PUBLIC_PORTFOLIO_GITHUB,
     image: project1,
     description: "Showcases my skills, projects, and professional journey with responsive design and animations.",
     technologies: ["Next.js", "React", "TS", "Tailwind", "Framer Motion"]
+  },
+  {
+    title: "Refix Garage",
+    website: process.env.NEXT_PUBLIC_REFIX_GARAGE_URL,
+    github: process.env.NEXT_PUBLIC_REFIX_GARAGE_GITHUB,
+    image: project3,
+    description: "Smartphone service-center management system with service tracking, billing, and analytics.",
+    technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Chart.js"]
   },
   {
     title: "Wanderlust",
@@ -37,19 +54,11 @@ export const PROJECTS = [
     technologies: ["React", "Node", "Express", "Tailwind", "MongoDB", "Stripe", "Socket.IO"]
   },
   {
-    title: "Refix Garage",
-    website: process.env.NEXT_PUBLIC_REFIX_GARAGE_URL,
-    github: process.env.NEXT_PUBLIC_REFIX_GARAGE_GITHUB,
-    image: project3,
-    description: "Smartphone service center management system with service tracking, billing, and analytics.",
-    technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Chart.js"]
-  },
-  {
     title: "Hit the Smiley",
     website: process.env.NEXT_PUBLIC_HIT_SMILEY_URL,
     github: process.env.NEXT_PUBLIC_HIT_SMILEY_GITHUB,
     image: noimage,
-    description: "Interactive game with animations, score tracking & responsive design.",
+    description: "Interactive game with animations, score tracking & responsive design built with React and GSAP.",
     technologies: ["React", "TS", "Redux", "GSAP", "Tailwind"]
   },
   {
@@ -57,16 +66,8 @@ export const PROJECTS = [
     website: process.env.NEXT_PUBLIC_README_GENERATOR_URL,
     github: process.env.NEXT_PUBLIC_README_GENERATOR_GITHUB,
     image: project5,
-    description: "Generates professional GitHub README files with AI integration.",
+    description: "Generates professional GitHub README files with AI integration for dynamic content creation and customization.",
     technologies: ["Next.js", "TS", "Tailwind", "Gemini AI"]
-  },
-  {
-    title: "Password Generator",
-    website: process.env.NEXT_PUBLIC_PSWD_GENERATOR_URL,
-    github: process.env.NEXT_PUBLIC_PSWD_GENERATOR_GITHUB,
-    image: noimage,
-    description: "Generates strong passwords with authentication and storage.",
-    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"]
   },
   {
     title: "Smart Depot",
@@ -77,20 +78,20 @@ export const PROJECTS = [
     technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Razorpay", "Chart.js"]
   },
   {
-    title: "Confidently",
-    website: process.env.NEXT_PUBLIC_CONFIDENTLY_URL,
-    github: process.env.NEXT_PUBLIC_CONFIDENTLY_GITHUB,
-    image: noimage,
-    description: "Practice interviews with slot booking, user management, and real-time communication.",
-    technologies: ["Next.js", "Nest.js", "MongoDB", "Socket.IO", "Tailwind"]
-  },
-  {
     title: "E-Learning",
     website: process.env.NEXT_PUBLIC_ELEARNING_URL,
     github: process.env.NEXT_PUBLIC_ELEARNING_GITHUB,
     image: noimage,
     description: "Online courses platform with course management, progress tracking, and authentication.",
     technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"]
+  },
+  {
+    title: "Confidently",
+    website: process.env.NEXT_PUBLIC_CONFIDENTLY_URL,
+    github: process.env.NEXT_PUBLIC_CONFIDENTLY_GITHUB,
+    image: noimage,
+    description: "Practice interviews with slot booking, user management, and real-time communication.",
+    technologies: ["Next.js", "Nest.js", "MongoDB", "Socket.IO", "Tailwind"]
   },
   {
     title: "Netflix Clone",
@@ -100,6 +101,7 @@ export const PROJECTS = [
     description: "React-based Netflix clone with API integration and responsive UI.",
     technologies: ["React", "CSS", "Axios", "JS"]
   },
+
   {
     title: "Weather App",
     website: process.env.NEXT_PUBLIC_WEATHER_URL,
@@ -115,6 +117,14 @@ export const PROJECTS = [
     image: noimage,
     description: "Bootstrap-based portfolio template with contact form.",
     technologies: ["HTML", "CSS", "Bootstrap"]
+  },
+  {
+    title: "Password Generator",
+    website: process.env.NEXT_PUBLIC_PSWD_GENERATOR_URL,
+    github: process.env.NEXT_PUBLIC_PSWD_GENERATOR_GITHUB,
+    image: noimage,
+    description: "Generates strong passwords with authentication and storage.",
+    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"]
   },
 ];
 
