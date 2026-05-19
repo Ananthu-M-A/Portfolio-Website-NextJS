@@ -1,13 +1,28 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ananthu M A",
+  url: "https://www.ananthuma.com",
+  jobTitle: "Full-Stack Engineer and Technical Trainer",
+  description:
+    "Production-grade full-stack engineer and technical trainer helping teams build scalable systems and understand modern software architecture.",
+  knowsAbout: [
+    "Next.js",
+    "Nest.js",
+    "TypeScript",
+    "Software Architecture",
+    "Technical Instruction",
+    "Backend Systems",
+  ],
+};
 
 export const metadata: Metadata = {
-  title: "Ananthu M A | Fullstack Developer",
+  title: "Ananthu M A | Production-Grade Engineer and Technical Educator",
   description:
-    "Portfolio of Ananthu M A, a MERN Stack Developer passionate about building scalable web applications.",
+    "Production-grade full-stack engineer and technical trainer helping teams build scalable systems and understand modern software architecture.",
 };
 
 export default function RootLayout({
@@ -16,24 +31,31 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Ananthu M A | Fullstack Developer</title>
+        <title>Ananthu M A | Production-Grade Engineer and Technical Educator</title>
         <meta
           name="description"
-          content="Portfolio of Ananthu M A, a MERN Stack Developer passionate about building scalable web applications."
+          content="Production-grade full-stack engineer and technical trainer helping teams build scalable systems and understand modern software architecture."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#0f172a" />
+        <meta name="theme-color" content="#05070d" />
         <link rel="icon" href="/icon.jpg" />
-        <meta property="og:title" content="Ananthu M A | Fullstack Developer" />
+        <meta
+          property="og:title"
+          content="Ananthu M A | Production-Grade Engineer and Technical Educator"
+        />
         <meta
           property="og:description"
-          content="Portfolio of Ananthu M A, a MERN Stack Developer passionate about building scalable web applications."
+          content="Production-grade full-stack engineer and technical trainer helping teams build scalable systems and understand modern software architecture."
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/profile.jpg" />
         <meta property="og:url" content="https://ananthuma.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
       </head>
-      <body className={`${inter.className} bg-black text-neutral-300`}>
+      <body className="bg-black text-neutral-300">
         {children}
       </body>
     </html>
