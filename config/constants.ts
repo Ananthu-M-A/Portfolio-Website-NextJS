@@ -1,9 +1,10 @@
-import project0 from "../public/projects/project-0.png";
-import project1 from "../public/projects/project-1.png";
-import project2 from "../public/projects/project-2.png";
-import project3 from "../public/projects/project-3.png";
-import project5 from "../public/projects/project-5.png";
-import project7 from "../public/projects/project-7.png";
+import oruma from "../public/projects/oruma.png";
+import fixyourphone from "../public/projects/fixyourphone.png";
+import portfolio from "../public/projects/portfolio.png";
+import refixgarage from "../public/projects/refixgarage.png";
+import wanderlust from "../public/projects/wanderlust.png";
+import smartdepot from "../public/projects/smartdepot.png";
+import readmegenerator from "../public/projects/readmegenerator.png";
 import noimage from "../public/projects/no-img-available.jpg";
 
 export const HERO_CONTENT = `Welcome to my portfolio! I'm Ananthu M A, a skilled MERN stack developer with a comprehensive understanding of front-end and back-end technologies. My journey in tech began with a Diploma in Electronics Engineering, and I further honed my skills in computer science and software development through intensive training. With a knack for problem-solving and a keen eye for detail, I specialize in building scalable and efficient web applications. My portfolio showcases a range of projects, from complex e-commerce platforms to innovative hotel booking systems, demonstrating my versatility and commitment to excellence. Explore my work, and let's connect to discuss how I can contribute to your next big project!`;
@@ -22,109 +23,44 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "Fix Your Phone",
-    website: process.env.NEXT_PUBLIC_FIXYOURPHONE_URL,
-    github: process.env.NEXT_PUBLIC_FIXYOURPHONE_GITHUB,
-    image: project0,
-    description: "A platform for mastering smartphone repair with professional guides, tools & more.",
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"]
-  },
-  {
-    title: "Portfolio",
-    website: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
-    github: process.env.NEXT_PUBLIC_PORTFOLIO_GITHUB,
-    image: project1,
-    description: "Showcases my skills, projects, and professional journey with responsive design and animations.",
-    technologies: ["Next.js", "React", "TS", "Tailwind", "Framer Motion"]
+    title: "ORUMA",
+    website: process.env.NEXT_PUBLIC_ORUMA_URL,
+    github: process.env.NEXT_PUBLIC_ORUMA_GITHUB,
+    image: oruma,
+    description: "Mental wellness and counselling platform for therapist discovery, appointment booking, and secure user management.",
+    technologies: ["Next.js", "Nest.js", "PostgreSQL", "TypeORM", "Tailwind CSS" ]
   },
   {
     title: "Refix Garage",
     website: process.env.NEXT_PUBLIC_REFIX_GARAGE_URL,
     github: process.env.NEXT_PUBLIC_REFIX_GARAGE_GITHUB,
-    image: project3,
+    image: refixgarage,
     description: "Smartphone service-center management system with service tracking, billing, and analytics.",
     technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Chart.js"]
   },
   {
-    title: "Wanderlust",
-    website: process.env.NEXT_PUBLIC_WANDERLUST_URL,
-    github: process.env.NEXT_PUBLIC_WANDERLUST_GITHUB,
-    image: project2,
-    description: "Hotel & restaurant booking platform with live chat, chatbot, and payment integration.",
-    technologies: ["React", "Node", "Express", "Tailwind", "MongoDB", "Stripe", "Socket.IO"]
+    title: "Portfolio",
+    website: process.env.NEXT_PUBLIC_PORTFOLIO_URL,
+    github: process.env.NEXT_PUBLIC_PORTFOLIO_GITHUB,
+    image: portfolio,
+    description: "Showcases my skills, projects, and professional journey with responsive design and animations.",
+    technologies: ["Next.js", "React", "TS", "Tailwind", "Framer Motion"]
   },
   {
-    title: "Hit the Smiley",
-    website: process.env.NEXT_PUBLIC_HIT_SMILEY_URL,
-    github: process.env.NEXT_PUBLIC_HIT_SMILEY_GITHUB,
-    image: noimage,
-    description: "Interactive game with animations, score tracking & responsive design built with React and GSAP.",
-    technologies: ["React", "TS", "Redux", "GSAP", "Tailwind"]
+    title: "Fix Your Phone",
+    website: process.env.NEXT_PUBLIC_FIXYOURPHONE_URL,
+    github: process.env.NEXT_PUBLIC_FIXYOURPHONE_GITHUB,
+    image: fixyourphone,
+    description: "A platform for mastering smartphone repair with professional guides, tools & more.",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"]
   },
   {
     title: "README Generator",
     website: process.env.NEXT_PUBLIC_README_GENERATOR_URL,
     github: process.env.NEXT_PUBLIC_README_GENERATOR_GITHUB,
-    image: project5,
+    image: readmegenerator,
     description: "Generates professional GitHub README files with AI integration for dynamic content creation and customization.",
     technologies: ["Next.js", "TS", "Tailwind", "Gemini AI"]
-  },
-  {
-    title: "Smart Depot",
-    website: process.env.NEXT_PUBLIC_SMARTDEPOT_URL,
-    github: process.env.NEXT_PUBLIC_SMARTDEPOT_GITHUB,
-    image: project7,
-    description: "E-commerce platform for service engineers with secure checkout and order tracking.",
-    technologies: ["Next.js", "Node", "MongoDB", "Tailwind", "Razorpay", "Chart.js"]
-  },
-  {
-    title: "E-Learning",
-    website: process.env.NEXT_PUBLIC_ELEARNING_URL,
-    github: process.env.NEXT_PUBLIC_ELEARNING_GITHUB,
-    image: noimage,
-    description: "Online courses platform with course management, progress tracking, and authentication.",
-    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind", "Redux"]
-  },
-  {
-    title: "Confidently",
-    website: process.env.NEXT_PUBLIC_CONFIDENTLY_URL,
-    github: process.env.NEXT_PUBLIC_CONFIDENTLY_GITHUB,
-    image: noimage,
-    description: "Practice interviews with slot booking, user management, and real-time communication.",
-    technologies: ["Next.js", "Nest.js", "MongoDB", "Socket.IO", "Tailwind"]
-  },
-  {
-    title: "Netflix Clone",
-    website: process.env.NEXT_PUBLIC_NETFLIX_CLONE_URL,
-    github: process.env.NEXT_PUBLIC_NETFLIX_CLONE_GITHUB,
-    image: noimage,
-    description: "React-based Netflix clone with API integration and responsive UI.",
-    technologies: ["React", "CSS", "Axios", "JS"]
-  },
-
-  {
-    title: "Weather App",
-    website: process.env.NEXT_PUBLIC_WEATHER_URL,
-    github: process.env.NEXT_PUBLIC_WEATHER_GITHUB,
-    image: noimage,
-    description: "Displays current weather using API integration.",
-    technologies: ["HTML", "CSS", "JS", "API"]
-  },
-  {
-    title: "Demo Portfolio",
-    website: process.env.NEXT_PUBLIC_DEMO_PORTFOLIO_URL,
-    github: process.env.NEXT_PUBLIC_DEMO_PORTFOLIO_GITHUB,
-    image: noimage,
-    description: "Bootstrap-based portfolio template with contact form.",
-    technologies: ["HTML", "CSS", "Bootstrap"]
-  },
-  {
-    title: "Password Generator",
-    website: process.env.NEXT_PUBLIC_PSWD_GENERATOR_URL,
-    github: process.env.NEXT_PUBLIC_PSWD_GENERATOR_GITHUB,
-    image: noimage,
-    description: "Generates strong passwords with authentication and storage.",
-    technologies: ["React", "Node", "Express", "MongoDB", "Tailwind"]
   },
 ];
 
@@ -139,70 +75,121 @@ const findProject = (title: string) => {
 
 export const FEATURED_PROJECTS = [
   {
-    ...findProject("Confidently"),
-    label: "Practice interview platform",
+    ...findProject("ORUMA"),
+    label: "Mental wellness and counselling platform",
     problem:
-      "Interview preparation needs scheduling, role-aware sessions, progress visibility, and real-time communication without becoming operationally messy.",
+      "Individuals seeking mental wellness support often face difficulty finding trusted professionals, booking sessions conveniently, and accessing a structured digital counselling experience in one place.",
     architecture:
-      "Next.js handles the product interface and protected flows, while Nest.js organizes backend responsibilities around users, bookings, sessions, and communication.",
+      "Built with a scalable full-stack architecture using Next.js for frontend and backend, modular component design, secure authentication flows, role-based access control, and PostgreSQL database integration for structured data management.",
     decisions: [
-      "JWT authentication",
-      "Role-based authorization",
-      "Socket.IO communication",
-      "Protected dashboards",
-      "Modular Nest.js services",
+      "Full-stack Next.js architecture",
+      "Role-based authentication system",
+      "Modular reusable component design",
+      "PostgreSQL relational database",
+      "Secure session and credential management",
+      "Responsive mobile-first interface",
+      "Scalable API route structure",
+      "Admin-driven content and user management"
     ],
     scaling:
-      "Domain separation keeps the platform ready for future mentor analytics, notification workers, and independent session services.",
+      "The platform architecture supports future expansion including video consultations, therapist dashboards, appointment automation, payment gateway integration, patient records, wellness programs, and multilingual support.",
     teaching:
-      "Useful for explaining auth boundaries, real-time events, and why backend modules should map to business capabilities.",
-    video: "Authentication Flow Breakdown",
+      "Excellent for demonstrating scalable SaaS architecture, authentication workflows, database-driven application design, API structuring, and full-stack product engineering.",
+    video: "ORUMA Architecture Walkthrough",
     walkthroughBody:
-      "Hi Ananthu, I would like to see the Confidently authentication flow architecture walkthrough.",
+      "Hi Ananthu, I would like to see the ORUMA platform walkthrough.",
   },
-  {
-    ...findProject("Smart Depot"),
-    label: "Engineer-focused commerce system",
-    problem:
-      "Service engineers need reliable product discovery, order tracking, secure checkout, and admin visibility in one focused workflow.",
-    architecture:
-      "A Next.js storefront is supported by server-side data flows, payment integration, inventory-aware product modeling, and operational dashboards.",
-    decisions: [
-      "Razorpay checkout",
-      "Order lifecycle tracking",
-      "MongoDB modeling",
-      "Dashboard analytics",
-      "API-first data access",
-    ],
-    scaling:
-      "The core commerce flow is isolated from reporting concerns so analytics can grow without slowing buyer actions.",
-    teaching:
-      "A practical example for teaching payment states, API contracts, and dashboard data aggregation.",
-    video: "Scaling This Architecture",
-    walkthroughBody:
-      "Hi Ananthu, I would like to see the Smart Depot scaling architecture walkthrough.",
-  },
+
   {
     ...findProject("Refix Garage"),
     label: "Service-center management system",
     problem:
-      "Repair businesses need service tracking, billing, customer updates, and visibility into operational bottlenecks.",
+    "Repair businesses need organized workflows for service tracking, billing management, and operational visibility.",
     architecture:
-      "The application models service tickets as the center of the system, connecting customer records, billing, status changes, and admin analytics.",
+      "The application models repair workflows around service tickets connected to billing, customer management, and analytics dashboards.",
     decisions: [
       "Service workflow modeling",
-      "Billing records",
       "Chart.js analytics",
       "MongoDB persistence",
-      "Responsive admin UI",
+      "Admin-focused UI",
+      "Responsive dashboard architecture",
     ],
     scaling:
-      "A workflow-first model makes it easier to add technician assignment, SLA reporting, and customer notifications later.",
+    "The workflow-first structure supports future technician assignment systems, notifications, and SLA tracking.",
     teaching:
-      "Strong teaching material for turning messy real-world operations into clean domain models.",
-    video: "Nest.js Module Design Explained",
+    "Strong example for teaching real-world domain modeling and operational workflow architecture.",
+    video: "Refix Garage Workflow Architecture",
     walkthroughBody:
-      "Hi Ananthu, I would like to see the Refix Garage module design walkthrough.",
+    "Hi Ananthu, I would like to see the Refix Garage system walkthrough.",
+  },
+  
+  {
+    ...findProject("Portfolio"),
+    label: "Personal developer portfolio",
+    problem:
+      "Developers need a professional platform that communicates technical ability, architecture thinking, and project depth beyond simple visual presentation.",
+    architecture:
+      "Designed using Next.js with animation-driven UI, modular sections, and scalable component organization for maintainability.",
+    decisions: [
+      "SSR optimization",
+      "Tailwind styling system",
+      "Reusable components",
+      "Framer Motion transitions",
+      "SEO-friendly structure",
+    ],
+    scaling:
+    "The architecture allows future integration of blogs, CMS-driven content, analytics, and interactive case studies.",
+    teaching:
+    "Useful for demonstrating portfolio architecture, modern frontend practices, and scalable UI composition.",
+    video: "Portfolio System Design Walkthrough",
+    walkthroughBody:
+    "Hi Ananthu, I would like to see the Portfolio architecture walkthrough.",
+  },
+  
+  {
+    ...findProject("Fix Your Phone"),
+    label: "Smartphone repair learning platform",
+    problem:
+      "Aspiring technicians struggle to access structured repair knowledge, reliable repair workflows, and practical troubleshooting guidance in one place.",
+    architecture:
+      "Built with a scalable Next.js frontend architecture using reusable UI components, TypeScript safety, and responsive content delivery patterns.",
+    decisions: [
+      "Component-driven UI",
+      "TypeScript integration",
+      "Framer Motion animations",
+      "Responsive learning interface",
+      "Modular page structure",
+    ],
+    scaling:
+      "The platform structure supports future additions like premium courses, authentication, progress tracking, and community-driven repair resources.",
+    teaching:
+      "Excellent for explaining reusable frontend architecture, scalable UI systems, and content-focused application design.",
+    video: "Fix Your Phone Architecture Walkthrough",
+    walkthroughBody:
+      "Hi Ananthu, I would like to see the Fix Your Phone platform walkthrough.",
+  },
+
+  {
+    ...findProject("README Generator"),
+    label: "AI-powered README generation tool",
+    problem:
+      "Developers often struggle to create structured and professional documentation quickly for their repositories.",
+    architecture:
+      "Built with Next.js and AI-powered content generation workflows focused on dynamic documentation creation.",
+    decisions: [
+      "Gemini AI integration",
+      "Dynamic markdown generation",
+      "Reusable form systems",
+      "Client-side rendering",
+      "Tailwind UI architecture",
+    ],
+    scaling:
+      "Prepared for template systems, GitHub integrations, and collaborative documentation workflows.",
+    teaching:
+      "Strong example for teaching AI-assisted tooling and practical developer productivity applications.",
+    video: "README Generator AI Workflow",
+    walkthroughBody:
+      "Hi Ananthu, I would like to see the README Generator architecture walkthrough.",
   },
 ];
 

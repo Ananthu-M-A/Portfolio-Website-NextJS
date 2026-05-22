@@ -267,8 +267,8 @@ export default function Home() {
             </div>
 
             <div className="mt-10 grid gap-3 border-y border-white/10 py-5 sm:grid-cols-2 lg:grid-cols-4">
-              {PROOF_STRIP.map((item) => (
-                <div key={item} className="flex items-start gap-2 text-sm text-neutral-300">
+              {PROOF_STRIP.map((item, index) => (
+                <div key={`${item}-${index}`} className="flex items-start gap-2 text-sm text-neutral-300">
                   <CheckCircle2 className="mt-0.5 shrink-0 text-cyan-300" size={16} />
                   <span>{item}</span>
                 </div>
@@ -309,7 +309,7 @@ export default function Home() {
                 <h3 className="mb-6 text-2xl font-semibold text-white">{column.title}</h3>
                 <div className="grid gap-4">
                   {column.items.map((item) => (
-                    <div key={item.title} className="rounded-md border border-white/10 p-4">
+                    <div key={`${column.title}-${item.title}`} className="rounded-md border border-white/10 p-4">
                       <h4 className="font-semibold text-white">{item.title}</h4>
                       <p className="mt-2 text-sm leading-6 text-neutral-400">{item.body}</p>
                     </div>
@@ -332,14 +332,14 @@ export default function Home() {
           <div className="grid gap-8">
             {FEATURED_PROJECTS.map((project) => (
               <article
-                key={project.name}
+                key={project.title}
                 className="grid gap-6 rounded-lg border border-white/10 bg-white/[0.03] p-5 lg:grid-cols-[0.9fr_1.1fr] lg:p-6"
               >
                 <div>
                   <div className="overflow-hidden rounded-md border border-white/10 bg-black">
                     <Image
                       src={project.image}
-                      alt={`${project.name} project preview`}
+                      alt={`${project.title} project preview`}
                       width={760}
                       height={460}
                       className="h-64 w-full object-cover opacity-85"
@@ -350,11 +350,11 @@ export default function Home() {
                       <a
                         href={createMailto(
                           CONTACT.email,
-                          `${project.name} architecture walkthrough`,
+                          `${project.title} architecture walkthrough`,
                           project.walkthroughBody
                         )}
                         className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-cyan-300 text-cyan-950 transition hover:bg-cyan-200"
-                        aria-label={`Request ${project.name} architecture walkthrough`}
+                        aria-label={`Request ${project.title} architecture walkthrough`}
                       >
                         <Play size={18} fill="currentColor" />
                       </a>
@@ -394,7 +394,7 @@ export default function Home() {
                   <p className="text-sm font-medium uppercase tracking-[0.2em] text-cyan-300">
                     {project.label}
                   </p>
-                  <h3 className="mt-2 text-3xl font-semibold text-white">{project.name}</h3>
+                  <h3 className="mt-2 text-3xl font-semibold text-white">{project.title}</h3>
 
                   <div className="mt-6 grid gap-5">
                     <div>
@@ -410,9 +410,9 @@ export default function Home() {
                       <p className="mt-2 leading-7 text-neutral-400">{project.architecture}</p>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {project.decisions.map((decision) => (
+                      {project.decisions.map((decision, index) => (
                         <span
-                          key={decision}
+                          key={`${project.title}-decision-${index}`}
                           className="rounded-md border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-neutral-200"
                         >
                           {decision}
@@ -552,9 +552,9 @@ export default function Home() {
               through deep repetition, production building, and continuous learning.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              {CREDENTIAL_ISSUERS.map((credential) => (
+              {CREDENTIAL_ISSUERS.map((credential, index) => (
                 <span
-                  key={credential}
+                  key={`${credential}-${index}`}
                   className="rounded-md border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100"
                 >
                   {credential}
@@ -604,9 +604,9 @@ export default function Home() {
           </div>
 
           <div className="mt-6 grid gap-5 lg:grid-cols-3">
-            {TESTIMONIALS.map((quote) => (
+            {TESTIMONIALS.map((quote, index) => (
               <blockquote
-                key={quote}
+                key={`testimonial-${index}`}
                 className="rounded-lg border border-white/10 bg-white/[0.03] p-6 text-lg leading-8 text-neutral-200"
               >
                 &ldquo;{quote}&rdquo;
