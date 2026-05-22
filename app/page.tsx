@@ -23,193 +23,25 @@ import {
   Workflow,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
-import { CERTIFICATIONS, CONTACT, PROJECTS } from "@/config/constants";
 
-const proofStrip = [
-  "28-week immersive engineering practice",
-  "Production-grade TypeScript frameworks",
-  "Working technical trainer",
-  "Google / Meta / IBM certified",
-];
-
-const teachingAdvantages = [
-  {
-    title: "Clear Architecture",
-    body: "Explaining systems daily trained me to structure applications cleanly, document decisions, and reduce unnecessary complexity.",
-  },
-  {
-    title: "Maintainable Code",
-    body: "I build for future developers, not just for deployment day.",
-  },
-  {
-    title: "Empathy-Driven UX",
-    body: "Handling student confusion sharpened my ability to anticipate user friction and edge cases.",
-  },
-  {
-    title: "Communication Speed",
-    body: "Clients do not need translated engineering jargon. I communicate architecture clearly and efficiently.",
-  },
-];
-
-const engineeringAdvantages = [
-  {
-    title: "Real-World Context",
-    body: "I teach from implementation experience: authentication flows, API architecture, rendering strategies, deployment pipelines, and scalability decisions.",
-  },
-  {
-    title: "Modern Stack Relevance",
-    body: "My instruction is rooted in current production tooling: Next.js, Nest.js, TypeScript, PostgreSQL, Docker, and modern deployment workflows.",
-  },
-  {
-    title: "Architectural Thinking",
-    body: "I teach students how systems work, not just how tutorials work.",
-  },
-  {
-    title: "Industry Readiness",
-    body: "Students learn debugging, reasoning, and scalable thinking instead of memorizing syntax.",
-  },
-];
-
-const projects = [
-  {
-    name: "Confidently",
-    image: "/projects/no-img-available.jpg",
-    website: PROJECTS.find((project) => project.title === "Confidently")?.website,
-    github: PROJECTS.find((project) => project.title === "Confidently")?.github,
-    label: "Practice interview platform",
-    problem:
-      "Interview preparation needs scheduling, role-aware sessions, progress visibility, and real-time communication without becoming operationally messy.",
-    architecture:
-      "Next.js handles the product interface and protected flows, while Nest.js organizes backend responsibilities around users, bookings, sessions, and communication.",
-    decisions: [
-      "JWT authentication",
-      "Role-based authorization",
-      "Socket.IO communication",
-      "Protected dashboards",
-      "Modular Nest.js services",
-    ],
-    scaling:
-      "Domain separation keeps the platform ready for future mentor analytics, notification workers, and independent session services.",
-    teaching:
-      "Useful for explaining auth boundaries, real-time events, and why backend modules should map to business capabilities.",
-    video: "Authentication Flow Breakdown",
-    walkthroughBody:
-      "Hi Ananthu, I would like to see the Confidently authentication flow architecture walkthrough.",
-  },
-  {
-    name: "Smart Depot",
-    image: "/projects/project-7.png",
-    website: PROJECTS.find((project) => project.title === "Smart Depot")?.website,
-    github: PROJECTS.find((project) => project.title === "Smart Depot")?.github,
-    label: "Engineer-focused commerce system",
-    problem:
-      "Service engineers need reliable product discovery, order tracking, secure checkout, and admin visibility in one focused workflow.",
-    architecture:
-      "A Next.js storefront is supported by server-side data flows, payment integration, inventory-aware product modeling, and operational dashboards.",
-    decisions: [
-      "Razorpay checkout",
-      "Order lifecycle tracking",
-      "MongoDB modeling",
-      "Dashboard analytics",
-      "API-first data access",
-    ],
-    scaling:
-      "The core commerce flow is isolated from reporting concerns so analytics can grow without slowing buyer actions.",
-    teaching:
-      "A practical example for teaching payment states, API contracts, and dashboard data aggregation.",
-    video: "Scaling This Architecture",
-    walkthroughBody:
-      "Hi Ananthu, I would like to see the Smart Depot scaling architecture walkthrough.",
-  },
-  {
-    name: "Refix Garage",
-    image: "/projects/project-3.png",
-    website: PROJECTS.find((project) => project.title === "Refix Garage")?.website,
-    github: PROJECTS.find((project) => project.title === "Refix Garage")?.github,
-    label: "Service-center management system",
-    problem:
-      "Repair businesses need service tracking, billing, customer updates, and visibility into operational bottlenecks.",
-    architecture:
-      "The application models service tickets as the center of the system, connecting customer records, billing, status changes, and admin analytics.",
-    decisions: [
-      "Service workflow modeling",
-      "Billing records",
-      "Chart.js analytics",
-      "MongoDB persistence",
-      "Responsive admin UI",
-    ],
-    scaling:
-      "A workflow-first model makes it easier to add technician assignment, SLA reporting, and customer notifications later.",
-    teaching:
-      "Strong teaching material for turning messy real-world operations into clean domain models.",
-    video: "Nest.js Module Design Explained",
-    walkthroughBody:
-      "Hi Ananthu, I would like to see the Refix Garage module design walkthrough.",
-  },
-];
-
-const articleIdeas = [
-  {
-    title: "SSR vs CSR in Next.js, Explained Like System Design",
-    body: "Route ownership, rendering cost, hydration, and where product constraints should decide the pattern.",
-  },
-  {
-    title: "Why Junior Developers Misunderstand Backend Architecture",
-    body: "A mentoring note on moving from routes and controllers to domain boundaries and data flow.",
-  },
-  {
-    title: "Event-Driven Systems Without the Buzzwords",
-    body: "A plain-language breakdown of producers, consumers, retries, and why async work changes failure modes.",
-  },
-  {
-    title: "The Real Purpose of Nest.js Modules",
-    body: "How modules help teams package capability, dependencies, and future scaling decisions.",
-  },
-];
-
-const stackGroups = [
-  {
-    title: "Frontend Systems",
-    icon: Code2,
-    items: ["Next.js", "React", "TypeScript", "Tailwind", "Zustand"],
-  },
-  {
-    title: "Backend Architecture",
-    icon: Server,
-    items: ["Nest.js", "Node.js", "Express", "PostgreSQL", "MongoDB"],
-  },
-  {
-    title: "Engineering Workflow",
-    icon: Workflow,
-    items: ["Git", "Docker", "REST APIs", "Authentication", "Deployment Pipelines"],
-  },
-];
-
-const credentialIssuers = ["Google", "Meta", "IBM", "Brototype Engineering Program"];
-
-const metrics = [
-  {
-    value: "28 Weeks",
-    label: "Intensive engineering immersion",
-    body: "12-16 hours/day focused on production-level development, debugging, and systems thinking.",
-  },
-  {
-    value: "Daily",
-    label: "Technical instruction",
-    body: "Actively training learners through technical troubleshooting, concept clarity, and engineering habits.",
-  },
-  {
-    value: "TypeScript",
-    label: "Production framework focus",
-    body: "Specialized in scalable JavaScript ecosystems using Next.js, Nest.js, and modern backend architecture.",
-  },
-];
-
-const testimonials = [
-  "Ananthu explains backend architecture in a way that removes intimidation completely.",
-  "What stood out was not just technical skill, but the ability to explain decisions clearly.",
-  "He approaches teaching like an engineer and engineering like a mentor.",
-];
+const STACK_ICONS = {
+  "Frontend Systems": Code2,
+  "Backend Architecture": Server,
+  "Engineering Workflow": Workflow,
+} as const;
+import {
+  ARTICLE_IDEAS,
+  CERTIFICATIONS,
+  CONTACT,
+  CREDENTIAL_ISSUERS,
+  ENGINEERING_ADVANTAGES,
+  FEATURED_PROJECTS,
+  METRICS,
+  PROOF_STRIP,
+  STACK_GROUPS,
+  TEACHING_ADVANTAGES,
+  TESTIMONIALS,
+} from "@/config/constants";
 
 const SectionHeader = ({
   eyebrow,
@@ -435,7 +267,7 @@ export default function Home() {
             </div>
 
             <div className="mt-10 grid gap-3 border-y border-white/10 py-5 sm:grid-cols-2 lg:grid-cols-4">
-              {proofStrip.map((item) => (
+              {PROOF_STRIP.map((item) => (
                 <div key={item} className="flex items-start gap-2 text-sm text-neutral-300">
                   <CheckCircle2 className="mt-0.5 shrink-0 text-cyan-300" size={16} />
                   <span>{item}</span>
@@ -461,12 +293,12 @@ export default function Home() {
               {
                 icon: GraduationCap,
                 title: "Teaching Developers Changed How I Build Software",
-                items: teachingAdvantages,
+                items: TEACHING_ADVANTAGES,
               },
               {
                 icon: Boxes,
                 title: "Building Production Systems Changed How I Teach",
-                items: engineeringAdvantages,
+                items: ENGINEERING_ADVANTAGES,
               },
             ].map((column) => (
               <div
@@ -498,7 +330,7 @@ export default function Home() {
           />
 
           <div className="grid gap-8">
-            {projects.map((project) => (
+            {FEATURED_PROJECTS.map((project) => (
               <article
                 key={project.name}
                 className="grid gap-6 rounded-lg border border-white/10 bg-white/[0.03] p-5 lg:grid-cols-[0.9fr_1.1fr] lg:p-6"
@@ -647,7 +479,7 @@ export default function Home() {
             </div>
 
             <div className="grid gap-5">
-              {articleIdeas.map((article) => (
+              {ARTICLE_IDEAS.map((article) => (
                 <div
                   key={article.title}
                   className="rounded-lg border border-white/10 bg-white/[0.03] p-5 transition hover:border-cyan-300/30"
@@ -682,27 +514,31 @@ export default function Home() {
               Core Tools, Grouped by Engineering Responsibility.
             </h2>
             <div className="mt-8 grid gap-5">
-              {stackGroups.map((group) => (
-                <div
-                  key={group.title}
-                  className="rounded-lg border border-white/10 bg-white/[0.03] p-5"
-                >
-                  <div className="mb-4 flex items-center gap-3">
-                    <group.icon className="text-cyan-300" size={22} />
-                    <h3 className="text-xl font-semibold text-white">{group.title}</h3>
+              {STACK_GROUPS.map((group) => {
+                const Icon = STACK_ICONS[group.title];
+
+                return (
+                  <div
+                    key={group.title}
+                    className="rounded-lg border border-white/10 bg-white/[0.03] p-5"
+                  >
+                    <div className="mb-4 flex items-center gap-3">
+                      <Icon className="text-cyan-300" size={22} />
+                      <h3 className="text-xl font-semibold text-white">{group.title}</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {group.items.map((item) => (
+                        <span
+                          key={item}
+                          className="rounded-md border border-white/10 bg-black/20 px-3 py-2 text-sm text-neutral-200"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <div className="flex flex-wrap gap-2">
-                    {group.items.map((item) => (
-                      <span
-                        key={item}
-                        className="rounded-md border border-white/10 bg-black/20 px-3 py-2 text-sm text-neutral-200"
-                      >
-                        {item}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -716,7 +552,7 @@ export default function Home() {
               through deep repetition, production building, and continuous learning.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              {credentialIssuers.map((credential) => (
+              {CREDENTIAL_ISSUERS.map((credential) => (
                 <span
                   key={credential}
                   className="rounded-md border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100"
@@ -755,7 +591,7 @@ export default function Home() {
           />
 
           <div className="grid gap-5 lg:grid-cols-3">
-            {metrics.map((metric) => (
+            {METRICS.map((metric) => (
               <div
                 key={metric.value}
                 className="rounded-lg border border-white/10 bg-white/[0.03] p-6"
@@ -768,7 +604,7 @@ export default function Home() {
           </div>
 
           <div className="mt-6 grid gap-5 lg:grid-cols-3">
-            {testimonials.map((quote) => (
+            {TESTIMONIALS.map((quote) => (
               <blockquote
                 key={quote}
                 className="rounded-lg border border-white/10 bg-white/[0.03] p-6 text-lg leading-8 text-neutral-200"

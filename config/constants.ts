@@ -128,6 +128,193 @@ export const PROJECTS = [
   },
 ];
 
+const findProject = (title: string) => {
+  const project = PROJECTS.find((project) => project.title === title);
+  if (!project) {
+    throw new Error(`Project not found: ${title}`);
+  }
+
+  return project;
+};
+
+export const FEATURED_PROJECTS = [
+  {
+    ...findProject("Confidently"),
+    label: "Practice interview platform",
+    problem:
+      "Interview preparation needs scheduling, role-aware sessions, progress visibility, and real-time communication without becoming operationally messy.",
+    architecture:
+      "Next.js handles the product interface and protected flows, while Nest.js organizes backend responsibilities around users, bookings, sessions, and communication.",
+    decisions: [
+      "JWT authentication",
+      "Role-based authorization",
+      "Socket.IO communication",
+      "Protected dashboards",
+      "Modular Nest.js services",
+    ],
+    scaling:
+      "Domain separation keeps the platform ready for future mentor analytics, notification workers, and independent session services.",
+    teaching:
+      "Useful for explaining auth boundaries, real-time events, and why backend modules should map to business capabilities.",
+    video: "Authentication Flow Breakdown",
+    walkthroughBody:
+      "Hi Ananthu, I would like to see the Confidently authentication flow architecture walkthrough.",
+  },
+  {
+    ...findProject("Smart Depot"),
+    label: "Engineer-focused commerce system",
+    problem:
+      "Service engineers need reliable product discovery, order tracking, secure checkout, and admin visibility in one focused workflow.",
+    architecture:
+      "A Next.js storefront is supported by server-side data flows, payment integration, inventory-aware product modeling, and operational dashboards.",
+    decisions: [
+      "Razorpay checkout",
+      "Order lifecycle tracking",
+      "MongoDB modeling",
+      "Dashboard analytics",
+      "API-first data access",
+    ],
+    scaling:
+      "The core commerce flow is isolated from reporting concerns so analytics can grow without slowing buyer actions.",
+    teaching:
+      "A practical example for teaching payment states, API contracts, and dashboard data aggregation.",
+    video: "Scaling This Architecture",
+    walkthroughBody:
+      "Hi Ananthu, I would like to see the Smart Depot scaling architecture walkthrough.",
+  },
+  {
+    ...findProject("Refix Garage"),
+    label: "Service-center management system",
+    problem:
+      "Repair businesses need service tracking, billing, customer updates, and visibility into operational bottlenecks.",
+    architecture:
+      "The application models service tickets as the center of the system, connecting customer records, billing, status changes, and admin analytics.",
+    decisions: [
+      "Service workflow modeling",
+      "Billing records",
+      "Chart.js analytics",
+      "MongoDB persistence",
+      "Responsive admin UI",
+    ],
+    scaling:
+      "A workflow-first model makes it easier to add technician assignment, SLA reporting, and customer notifications later.",
+    teaching:
+      "Strong teaching material for turning messy real-world operations into clean domain models.",
+    video: "Nest.js Module Design Explained",
+    walkthroughBody:
+      "Hi Ananthu, I would like to see the Refix Garage module design walkthrough.",
+  },
+];
+
+export const PROOF_STRIP = [
+  "28-week immersive engineering practice",
+  "Production-grade TypeScript frameworks",
+  "Working technical trainer",
+  "Google / Meta / IBM certified",
+];
+
+export const TEACHING_ADVANTAGES = [
+  {
+    title: "Clear Architecture",
+    body: "Explaining systems daily trained me to structure applications cleanly, document decisions, and reduce unnecessary complexity.",
+  },
+  {
+    title: "Maintainable Code",
+    body: "I build for future developers, not just for deployment day.",
+  },
+  {
+    title: "Empathy-Driven UX",
+    body: "Handling student confusion sharpened my ability to anticipate user friction and edge cases.",
+  },
+  {
+    title: "Communication Speed",
+    body: "Clients do not need translated engineering jargon. I communicate architecture clearly and efficiently.",
+  },
+];
+
+export const ENGINEERING_ADVANTAGES = [
+  {
+    title: "Real-World Context",
+    body: "I teach from implementation experience: authentication flows, API architecture, rendering strategies, deployment pipelines, and scalability decisions.",
+  },
+  {
+    title: "Modern Stack Relevance",
+    body: "My instruction is rooted in current production tooling: Next.js, Nest.js, TypeScript, PostgreSQL, Docker, and modern deployment workflows.",
+  },
+  {
+    title: "Architectural Thinking",
+    body: "I teach students how systems work, not just how tutorials work.",
+  },
+  {
+    title: "Industry Readiness",
+    body: "Students learn debugging, reasoning, and scalable thinking instead of memorizing syntax.",
+  },
+];
+
+export const ARTICLE_IDEAS = [
+  {
+    title: "SSR vs CSR in Next.js, Explained Like System Design",
+    body: "Route ownership, rendering cost, hydration, and where product constraints should decide the pattern.",
+  },
+  {
+    title: "Why Junior Developers Misunderstand Backend Architecture",
+    body: "A mentoring note on moving from routes and controllers to domain boundaries and data flow.",
+  },
+  {
+    title: "Event-Driven Systems Without the Buzzwords",
+    body: "A plain-language breakdown of producers, consumers, retries, and why async work changes failure modes.",
+  },
+  {
+    title: "The Real Purpose of Nest.js Modules",
+    body: "How modules help teams package capability, dependencies, and future scaling decisions.",
+  },
+];
+
+export const STACK_GROUPS = [
+  {
+    title: "Frontend Systems",
+    items: ["Next.js", "React", "TypeScript", "Tailwind", "Zustand"],
+  },
+  {
+    title: "Backend Architecture",
+    items: ["Nest.js", "Node.js", "Express", "PostgreSQL", "MongoDB"],
+  },
+  {
+    title: "Engineering Workflow",
+    items: ["Git", "Docker", "REST APIs", "Authentication", "Deployment Pipelines"],
+  },
+];
+
+export const CREDENTIAL_ISSUERS = [
+  "Google",
+  "Meta",
+  "IBM",
+  "Brototype Engineering Program",
+];
+
+export const METRICS = [
+  {
+    value: "28 Weeks",
+    label: "Intensive engineering immersion",
+    body: "12-16 hours/day focused on production-level development, debugging, and systems thinking.",
+  },
+  {
+    value: "Daily",
+    label: "Technical instruction",
+    body: "Actively training learners through technical troubleshooting, concept clarity, and engineering habits.",
+  },
+  {
+    value: "TypeScript",
+    label: "Production framework focus",
+    body: "Specialized in scalable JavaScript ecosystems using Next.js, Nest.js, and modern backend architecture.",
+  },
+];
+
+export const TESTIMONIALS = [
+  "Ananthu explains backend architecture in a way that removes intimidation completely.",
+  "What stood out was not just technical skill, but the ability to explain decisions clearly.",
+  "He approaches teaching like an engineer and engineering like a mentor.",
+];
 
 export const CONTACT = {
   linkedin: process.env.NEXT_PUBLIC_LINKEDIN,
