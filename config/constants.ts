@@ -270,7 +270,7 @@ export const STACK_GROUPS = [
     title: "Engineering Workflow",
     items: ["Git", "Docker", "REST APIs", "Authentication", "Deployment Pipelines"],
   },
-];
+] as const;
 
 export const CREDENTIAL_ISSUERS = [
   "Google",
