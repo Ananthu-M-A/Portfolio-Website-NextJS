@@ -1,14 +1,23 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import Spotlight from "@/components/Spotlight";
+import { CONTACT, SITE } from "@/config/constants";
 import "./globals.css";
+
+const geistSans = Geist({ subsets: ["latin"], display: "swap", variable: "--font-geist-sans" });
+const geistMono = Geist_Mono({ subsets: ["latin"], display: "swap", variable: "--font-geist-mono" });
 
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: "Ananthu M A",
-  url: "https://www.ananthuma.com",
+  name: SITE.name,
+  url: SITE.url,
+  image: `${SITE.url}/profile.jpg`,
   jobTitle: "Full-Stack Engineer and Technical Trainer",
-  description:
-    "Production-grade full-stack engineer and technical trainer helping teams build scalable systems and understand modern software architecture.",
+  description: SITE.description,
+  sameAs: [CONTACT.linkedin, CONTACT.github, CONTACT.medium, CONTACT.leetcode].filter(Boolean),
+  address: { "@type": "PostalAddress", addressRegion: "Kerala", addressCountry: "IN" },
   knowsAbout: [
     "Next.js",
     "Nest.js",
@@ -20,43 +29,50 @@ const personSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Ananthu M A | Production-Grade Engineer and Technical Educator",
-  description:
-    "Production-grade full-stack engineer and technical trainer helping teams build scalable systems and understand modern software architecture.",
+  metadataBase: new URL(SITE.url),
+  title: SITE.title,
+  description: SITE.description,
+  authors: [{ name: SITE.name, url: SITE.url }],
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: SITE.name,
+    title: SITE.title,
+    description: SITE.description,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE.title,
+    description: SITE.description,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#05070d",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <head>
-        <title>Ananthu M A | Production-Grade Engineer and Technical Educator</title>
-        <meta
-          name="description"
-          content="Production-grade full-stack engineer and technical trainer helping teams build scalable systems and understand modern software architecture."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#05070d" />
-        <link rel="icon" href="/icon.jpg" />
-        <meta
-          property="og:title"
-          content="Ananthu M A | Production-Grade Engineer and Technical Educator"
-        />
-        <meta
-          property="og:description"
-          content="Production-grade full-stack engineer and technical trainer helping teams build scalable systems and understand modern software architecture."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="/profile.jpg" />
-        <meta property="og:url" content="https://ananthuma.com" />
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className="bg-ink-950 font-sans text-neutral-300 antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-cyan-300 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-cyan-950"
+        >
+          Skip to content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
-      </head>
-      <body className="bg-black text-neutral-300">
         {children}
+        <Spotlight />
+        <Analytics />
       </body>
     </html>
   );
