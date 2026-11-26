@@ -36,3 +36,6 @@ dev-server.err.log
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local tool settings
+.claude/

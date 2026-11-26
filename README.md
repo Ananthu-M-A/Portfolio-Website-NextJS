@@ -93,4 +93,4 @@ This project is licensed under Proprietary terms. Specific licensing details wil
 
 - GitHub: [Ananthu-M-A](https://github.com/Ananthu-M-A)
 - Portfolio: [https://ananthuma.com](https://ananthuma.com)
-- Email: ananthumapookkad@gmail.com
+- Email: me@ananthuma.com
